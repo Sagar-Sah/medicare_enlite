@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useRef } from 'react';
-import Chart from 'chart.js/auto'; // Ensure you have Chart.js installed
-import analyticsDataJson from './analyticsData.json'; // Adjust the path as necessary
+import Chart from 'chart.js/auto';
+import analyticsDataJson from './analyticsData.json';
 import './style.css';
 
 const BotAnalytics = () => {
   const [topQueries, setTopQueries] = useState([]);
-  const performanceChartRef = useRef(null); // Create a ref for the canvas
+  const performanceChartRef = useRef(null);
 
   // Function to draw performance chart using Chart.js
   const drawPerformanceChart = (data) => {
-    const ctx = performanceChartRef.current.getContext('2d'); // Use ref to get context
+    const ctx = performanceChartRef.current.getContext('2d');
     const performanceChart = new Chart(ctx, {
       type: 'line',
       data: {
@@ -54,17 +54,70 @@ const BotAnalytics = () => {
   return (
     <section className="analytics">
       <header>
-        <h1>Bot Analytics</h1>
+        <h1 style={{
+          padding: '.75em 1.25em',
+          backgroundColor: 'rgb(105, 155, 245, 0.5)',
+          borderRadius: '.35em',
+          margin: '.5em',
+          fontSize: '1.35em',
+          color: 'inherit',
+          textAlign: 'left',
+        }}>Bot Analytics</h1>
       </header>
-      <div className="analytics-container">
-        <h3>Performance Overview</h3>
-        <canvas ref={performanceChartRef}></canvas> {/* Attach ref here */}
-        <h3>Top User Queries</h3>
-        <ul className="top-queries">
-          {topQueries.map((query, index) => (
-            <li key={index}>"{query}"</li>
-          ))}
-        </ul>
+      <div className="analytics-container" style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: '1em',
+        alignItems: 'start',
+        justifyContent: 'start',
+        boxShadow: '2px 2px 50px 5px rgb(125, 125, 125, 0.15)',
+        margin: '1em',
+        borderRadius: '.5em',
+        padding: '1em 0'
+      }}>
+        <div style={{
+          flexGrow: '1',
+          maxWidth: '750px',
+          padding: '1em',
+          borderRight: '1px solid rgb(125,125, 125, 0.3)'
+        }}>
+          <h3 style={{
+            padding: '.75em 2em',
+            fontFamily: 'Inter, sans-serif',
+            fontSize: '.9em'
+          }}>Performance Overview</h3>
+          <canvas ref={performanceChartRef} style={{
+            height: '360px',
+            width: '100%',
+            marginBottom: '1em'
+          }}></canvas>
+        </div>
+        <div style={{
+          padding: '1em',
+          flexGrow: '1',
+        }}>
+          <h3 style={{
+            padding: '.75em 2em',
+            fontFamily: 'Inter, sans-serif',
+            fontSize: '.9em'
+          }}>Top User Queries</h3>
+          <ul className="top-queries" style={{
+            borderLeft: '.2em solid #00796b',
+            borderRadius: '.25em',
+            padding: '.25em 1em',
+            marginTop: '2em'
+          }}>
+            {topQueries.map((query, index) => (
+              <li key={index} style={{
+                margin: '.5em .25em',
+                padding: '.75em',
+                borderRadius: '.5em',
+                width: '100%',
+                overflow: 'hidden',
+              }}>"{query}"</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

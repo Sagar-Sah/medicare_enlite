@@ -13,11 +13,9 @@ const Navbar = ({ activeTab, setActiveTab }) => {
       justifyContent: 'space-around',
       alignItems: 'center',
       flexWrap: 'wrap',
-      width: '99%',
       textAlign: 'center',
       borderRadius: '.5em',
       overflow: 'hidden',
-      margin: '.5em',
       marginBottom: '2em',
       gap: '.35em .25em'
     }}>
@@ -25,13 +23,13 @@ const Navbar = ({ activeTab, setActiveTab }) => {
         className={`nav-button ${activeTab === 'Active Bots' ? 'active' : ''}`}
         onClick={() => handleTabClick('Active Bots')}
         style={{
-          minWidth: '300px',
+          minWidth: '',
           flexGrow: '1',
-          padding: '.5em',
+          padding: '.75em',
           cursor: 'pointer',
-          fontSize: '20px',
+          fontSize: '1.15em',
           fontFamily: 'Rubik, sans-serif',
-          fontWeight: '600',
+          fontWeight: '500',
           textTransform: 'capitalize'
         }}
       >
@@ -41,13 +39,13 @@ const Navbar = ({ activeTab, setActiveTab }) => {
         className={`nav-button ${activeTab === 'Deactive Bots' ? 'active' : ''}`}
         onClick={() => handleTabClick('Deactive Bots')}
         style={{
-          minWidth: '300px',
+          minWidth: '',
           flexGrow: '1',
-          padding: '.5em',
+          padding: '.75em',
           cursor: 'pointer',
-          fontSize: '20px',
+          fontSize: '1.15em',
           fontFamily: 'Rubik, sans-serif',
-          fontWeight: '600',
+          fontWeight: '500',
           textTransform: 'capitalize'
         }}
       >
@@ -57,13 +55,13 @@ const Navbar = ({ activeTab, setActiveTab }) => {
         className={`nav-button ${activeTab === 'Training Data' ? 'active' : ''}`}
         onClick={() => handleTabClick('Training Data')}
         style={{
-          minWidth: '300px',
+          minWidth: '',
           flexGrow: '1',
-          padding: '.5em',
+          padding: '.75em',
           cursor: 'pointer',
-          fontSize: '20px',
+          fontSize: '1.15em',
           fontFamily: 'Rubik, sans-serif',
-          fontWeight: '600',
+          fontWeight: '500',
           textTransform: 'capitalize'
         }}
       >
@@ -73,13 +71,13 @@ const Navbar = ({ activeTab, setActiveTab }) => {
         className={`nav-button ${activeTab === 'Bot Analytics' ? 'active' : ''}`}
         onClick={() => handleTabClick('Bot Analytics')}
         style={{
-          minWidth: '300px',
+          minWidth: '',
           flexGrow: '1',
-          padding: '.5em',
+          padding: '.75em',
           cursor: 'pointer',
-          fontSize: '20px',
+          fontSize: '1.15em',
           fontFamily: 'Rubik, sans-serif',
-          fontWeight: '600',
+          fontWeight: '500',
           textTransform: 'capitalize'
         }}
       >
@@ -89,13 +87,13 @@ const Navbar = ({ activeTab, setActiveTab }) => {
         className={`nav-button ${activeTab === 'Activity Logs' ? 'active' : ''}`}
         onClick={() => handleTabClick('Activity Logs')}
         style={{
-          minWidth: '300px',
+          minWidth: '',
           flexGrow: '1',
-          padding: '.5em',
+          padding: '.75em',
           cursor: 'pointer',
-          fontSize: '20px',
+          fontSize: '1.15em',
           fontFamily: 'Rubik, sans-serif',
-          fontWeight: '600',
+          fontWeight: '500',
           textTransform: 'capitalize'
         }}
       >
@@ -105,13 +103,13 @@ const Navbar = ({ activeTab, setActiveTab }) => {
         className={`nav-button ${activeTab === 'Settings' ? 'active' : ''}`}
         onClick={() => handleTabClick('Settings')}
         style={{
-          minWidth: '300px',
+          minWidth: '',
           flexGrow: '1',
-          padding: '.5em',
+          padding: '.75em',
           cursor: 'pointer',
-          fontSize: '20px',
+          fontSize: '1.15em',
           fontFamily: 'Rubik, sans-serif',
-          fontWeight: '600',
+          fontWeight: '500',
           textTransform: 'capitalize'
         }}
       >
@@ -121,13 +119,13 @@ const Navbar = ({ activeTab, setActiveTab }) => {
         className={`nav-button ${activeTab === 'User Feedback' ? 'active' : ''}`}
         onClick={() => handleTabClick('User Feedback')}
         style={{
-          minWidth: '300px',
+          minWidth: '',
           flexGrow: '1',
-          padding: '.5em',
+          padding: '.75em',
           cursor: 'pointer',
-          fontSize: '20px',
+          fontSize: '1.15em',
           fontFamily: 'Rubik, sans-serif',
-          fontWeight: '600',
+          fontWeight: '500',
           textTransform: 'capitalize'
         }}
       >

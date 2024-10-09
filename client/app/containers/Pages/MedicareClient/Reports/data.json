@@ -1,0 +1,26 @@
+{
+  "performanceData": [
+    {
+      "botName": "Bot A",
+      "data": [
+        { "name": "Week 1", "responses": 400, "successRate": 85 },
+        { "name": "Week 2", "responses": 300, "successRate": 90 }
+      ]
+    },
+    {
+      "botName": "Bot B",
+      "data": [
+        { "name": "Week 1", "responses": 500, "successRate": 80 },
+        { "name": "Week 2", "responses": 600, "successRate": 75 }
+      ]
+    }
+  ],
+  "userEngagementData": [
+    { "week": "Week 1", "activeUsers": 100, "newUsers": 20 },
+    { "week": "Week 2", "activeUsers": 120, "newUsers": 30 }
+  ],
+  "billingData": [
+    { "date": "2024-09-01", "amount": 200 },
+    { "date": "2024-09-15", "amount": 300 }
+  ]
+}

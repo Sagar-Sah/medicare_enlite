@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import brand from 'enl-api/dummy/brand';
 import { injectIntl } from 'react-intl';
+import InteractionsDashboard from './InteractionsDashboard';
 
 function ClientInteractions(props) {
   const title = `${brand.name} - Interactions page`;
@@ -20,7 +21,7 @@ function ClientInteractions(props) {
         <meta property="twitter:description" content={description} />
       </Helmet>
       <div>
-        hello interactions
+        <InteractionsDashboard />
       </div>
     </div>
   );

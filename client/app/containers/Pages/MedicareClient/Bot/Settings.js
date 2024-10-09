@@ -39,7 +39,15 @@ const Settings = () => {
   return (
     <section className="settings">
       <header>
-        <h1>Settings</h1>
+        <h1 style={{
+          padding: '.75em 1.25em',
+          backgroundColor: 'rgb(105, 155, 245, 0.5)',
+          borderRadius: '.35em',
+          margin: '.5em',
+          fontSize: '1.35em',
+          color: 'inherit',
+          textAlign: 'left',
+        }}>Settings</h1>
       </header>
       <div className="settings-container">
         <div className="settings-section">

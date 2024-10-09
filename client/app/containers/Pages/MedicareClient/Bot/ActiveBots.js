@@ -44,6 +44,8 @@ const ActiveBots = () => {
             height: '100px',
             borderRadius: '50%',
             objectFit: 'cover',
+            border: '1px sold rgb(125, 125, 125, 0.4)',
+            margin: '1em'
           }}
         />
         <h3 className="bot-title" style={{
@@ -124,25 +126,28 @@ const ActiveBots = () => {
         display: 'flex',
         flexWrap: 'wrap',
         gap: '1em',
-        padding: '.5em'
+        padding: '.5em',
       }}>
         <button className="configure-btn" style={{
           padding: '.75em 1.5em',
           border: '1px solid rgb(125, 125, 125, 0.5)',
           fontSize: '.85em',
           borderRadius: '.25em',
+          color: 'white',
         }}>Configure</button>
         <button className="train-btn" style={{
           padding: '.75em 1.5em',
           border: '1px solid rgb(125, 125, 125, 0.5)',
           fontSize: '.85em',
           borderRadius: '.25em',
+          color: 'white',
         }}>Update Training Data</button>
         <button className="deactivate-btn" onClick={() => handleDeactivate(bot.id)} style={{
           padding: '.75em 1.5em',
           border: '1px solid rgb(125, 125, 125, 0.5)',
           fontSize: '.85em',
           borderRadius: '.25em',
+          color: 'white',
         }}>
           Deactivate
         </button>
@@ -151,6 +156,7 @@ const ActiveBots = () => {
           border: '1px solid rgb(125, 125, 125, 0.5)',
           fontSize: '.85em',
           borderRadius: '.25em',
+          color: 'white',
         }}>View Analytics</button>
       </div>
     </div>
@@ -191,7 +197,8 @@ const ActiveBots = () => {
           <button className="view-all-btn" onClick={handleViewAllClick} style={{
             padding: '.85em 1.5em',
             fontSize: '.9em',
-            margin: '1em'
+            margin: '1em',
+            color: 'white',
           }}>
             View All
           </button>

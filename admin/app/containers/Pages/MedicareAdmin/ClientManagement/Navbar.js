@@ -17,19 +17,18 @@ const Navbar = ({ activeTab, setActiveTab }) => {
       textAlign: 'center',
       borderRadius: '.5em',
       overflow: 'hidden',
-      margin: '.5em',
       marginBottom: '2em',
-      gap: '.25em'
+      gap: '.25em',
     }}>
       <div
         className={`nav-button ${activeTab === 'Edit Profile' ? 'active' : ''}`}
         onClick={() => handleTabClick('Edit Profile')}
         style={{
-          minWidth: '300px',
+          minWidth: '',
           flexGrow: '1',
-          padding: '.5em',
+          padding: '.75em',
           cursor: 'pointer',
-          fontSize: '20px',
+          fontSize: '1.15em',
           fontFamily: 'Rubik, sans-serif',
           fontWeight: '500',
           textTransform: 'capitalize'
@@ -41,11 +40,11 @@ const Navbar = ({ activeTab, setActiveTab }) => {
         className={`nav-button ${activeTab === 'Assign Bot' ? 'active' : ''}`}
         onClick={() => handleTabClick('Assign Bot')}
         style={{
-          minWidth: '300px',
+          minWidth: '',
           flexGrow: '1',
-          padding: '.5em',
+          padding: '.75em',
           cursor: 'pointer',
-          fontSize: '20px',
+          fontSize: '1.15em',
           fontFamily: 'Rubik, sans-serif',
           fontWeight: '500',
           textTransform: 'capitalize'
@@ -57,11 +56,11 @@ const Navbar = ({ activeTab, setActiveTab }) => {
         className={`nav-button ${activeTab === 'Account' ? 'active' : ''}`}
         onClick={() => handleTabClick('Account')}
         style={{
-          minWidth: '300px',
+          minWidth: '',
           flexGrow: '1',
-          padding: '.5em',
+          padding: '.75em',
           cursor: 'pointer',
-          fontSize: '20px',
+          fontSize: '1.15em',
           fontFamily: 'Rubik, sans-serif',
           fontWeight: '500',
           textTransform: 'capitalize'

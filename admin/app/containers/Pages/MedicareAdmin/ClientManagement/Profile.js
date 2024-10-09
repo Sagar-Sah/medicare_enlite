@@ -134,144 +134,288 @@ const Profile = () => {
   }, [isDragging]);
 
   return (
-    <div className='profile-card'>
-      <div
-        className='profile-header'
-        style={{
-          position: 'relative',
+    <div className='profile' style={{
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '1.5em',
+    }}>
+      <div className='profile-card' style={{
+        border: '1px solid rgb(125, 125, 125, 0.15)',
+        boxShadow: '2px 2px 50px 5px rgb(125, 125, 125, 0.25)',
+        paddingBottom: '1em',
+        borderRadius: '.5em',
+      }}>
+        <div
+          className='profile-header'
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'start',
+          }}
+        >
+          <input
+            type='file'
+            accept='image/*'
+            style={{ display: 'none' }}
+            id='file-upload'
+            onChange={handleImageUpload}
+          />
+          <img
+            src={selectedImage || 'https://via.placeholder.com/100'}
+            alt='Profile'
+            className='profile-image'
+            onClick={() => document.getElementById('file-upload').click()}
+            style={{
+              width: '120px',
+              height: '120px',
+              objectFit: 'cover',
+              margin: '1em 2em',
+              borderRadius: '50%',
+              opacity: isSuspended ? '.6' : '1',
+              cursor: 'pointer',
+              border: '1px solid rgb(125, 125, 125, .3)'
+            }}
+          />
+          <div className='profile-info-header' style={{ width: '400px', padding: '1em' }}>
+            <h2
+              style={{
+                fontSize: '1.75em',
+                fontFamily: 'Rubik, sans-serif',
+                fontWeight: '600',
+                textTransform: 'capitalize',
+                margin: '0',
+                color: 'inherit',
+                opacity: isSuspended ? '.6' : '1',
+              }}
+            >
+              {formData.name || 'No Full Name'}
+            </h2>
+            <p
+              style={{
+                fontSize: '1.12em',
+                fontFamily: 'Rubik, sans-serif',
+                fontWeight: '400',
+                margin: '0 0 0 .5em',
+                opacity: isSuspended ? '.6' : '1',
+              }}
+            >
+              @ {formData.username || 'No username'}
+            </p>
+          </div>
+
+          <div
+            className='profile-info'
+            style={{
+              fontFamily: 'Inter, sans-serif',
+              fontSize: '16px',
+              flexGrow: '1',
+              marginRight: '5em',
+              padding: '1em 1.5em',
+              width: '400px',
+              lineHeight: '2',
+            }}
+          >
+            <div className='profile-row'>
+              <span className='label' style={{ opacity: isSuspended ? '.6' : '1', fontWeight: '800' }}>
+                Email:{' '}
+              </span>
+              <span className='value' style={{ opacity: isSuspended ? '.6' : '1' }}>
+                {formData.email || 'No Email'}
+              </span>
+            </div>
+            <div className='profile-row'>
+              <span className='label' style={{ opacity: isSuspended ? '.6' : '1', fontWeight: '800' }}>
+                Address:{' '}
+              </span>
+              <span className='value' style={{ opacity: isSuspended ? '.6' : '1' }}>
+                {formData.address || 'No Address'}
+              </span>
+            </div>
+            <div className='profile-row'>
+              <span className='label' style={{ opacity: isSuspended ? '.6' : '1', fontWeight: '800' }}>
+                Contact No:{' '}
+              </span>
+              <span className='value' style={{ opacity: isSuspended ? '.6' : '1' }}>
+                {formData.contact || 'No Contact number'}
+              </span>
+            </div>
+            <div className='profile-row'>
+              <span className='label' style={{ opacity: isSuspended ? '.6' : '1', fontWeight: '800' }}>
+                DOB:{' '}
+              </span>
+              <span className='value' style={{ opacity: isSuspended ? '.6' : '1' }}>
+                {formData.dob || 'No DOB'}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className='action-buttons' style={{
           display: 'flex',
           flexWrap: 'wrap',
           alignItems: 'center',
-          justifyContent: 'start',
-        }}
-      >
-        <input
-          type='file'
-          accept='image/*'
-          style={{ display: 'none' }}
-          id='file-upload'
-          onChange={handleImageUpload}
-        />
-        <img
-          src={selectedImage || 'https://via.placeholder.com/100'}
-          alt='Profile'
-          className='profile-image'
-          onClick={() => document.getElementById('file-upload').click()}
-          style={{
-            width: '180px',
-            height: '180px',
-            objectFit: 'cover',
-            margin: '1em 2em',
-            borderRadius: '50%',
-            opacity: isSuspended ? '.6' : '1',
-            cursor: 'pointer'
-          }}
-        />
-        <div className='profile-info-header' style={{ width: '400px', padding: '1em' }}>
-          <h2
-            style={{
-              fontSize: '1.75em',
-              fontFamily: 'Rubik, sans-serif',
-              fontWeight: '600',
-              textTransform: 'capitalize',
-              margin: '0',
-              color: 'inherit',
-              opacity: isSuspended ? '.6' : '1',
-            }}
-          >
-            {formData.name || 'No Full Name'}
-          </h2>
-          <p
-            style={{
-              fontSize: '1.12em',
-              fontFamily: 'Rubik, sans-serif',
-              fontWeight: '400',
-              margin: '0 0 0 .5em',
-              opacity: isSuspended ? '.6' : '1',
-            }}
-          >
-            @ {formData.username || 'No username'}
-          </p>
-        </div>
-        <button
-          className='add-client-btn'
-          style={{
-            position: 'absolute',
-            top: '1em',
-            right: '1em',
-            border: '1px solid rgb(125, 125, 125, 0.5)',
-            borderRadius: '.25em',
-          }}
-          onClick={addNewUser}
-        >
-          Add New Client
-        </button>
-
-        <div
-          className='profile-info'
-          style={{
-            fontFamily: 'Inter, sans-serif',
-            fontSize: '16px',
-            flexGrow: '1',
-            marginRight: '5em',
-            padding: '1em 1.5em',
-            width: '400px',
-            lineHeight: '2',
-          }}
-        >
-          <div className='profile-row'>
-            <span className='label' style={{ opacity: isSuspended ? '.6' : '1', fontWeight: '800' }}>
-              Email:{' '}
-            </span>
-            <span className='value' style={{ opacity: isSuspended ? '.6' : '1' }}>
-              {formData.email || 'No Email'}
-            </span>
-          </div>
-          <div className='profile-row'>
-            <span className='label' style={{ opacity: isSuspended ? '.6' : '1', fontWeight: '800' }}>
-              Address:{' '}
-            </span>
-            <span className='value' style={{ opacity: isSuspended ? '.6' : '1' }}>
-              {formData.address || 'No Address'}
-            </span>
-          </div>
-          <div className='profile-row'>
-            <span className='label' style={{ opacity: isSuspended ? '.6' : '1', fontWeight: '800' }}>
-              Contact No:{' '}
-            </span>
-            <span className='value' style={{ opacity: isSuspended ? '.6' : '1' }}>
-              {formData.contact || 'No Contact number'}
-            </span>
-          </div>
-          <div className='profile-row'>
-            <span className='label' style={{ opacity: isSuspended ? '.6' : '1', fontWeight: '800' }}>
-              DOB:{' '}
-            </span>
-            <span className='value' style={{ opacity: isSuspended ? '.6' : '1' }}>
-              {formData.dob || 'No DOB'}
-            </span>
-          </div>
+          justifyContent: 'flex-start',
+          gap: '1em',
+          marginLeft: '1em'
+        }}>
+          <button className='edit-button' onClick={toggleEdit}>
+            {isEditing ? 'Cancel' : 'Edit'}
+          </button>
+          <button className='delete-button' onClick={deleteUser}>
+            Delete
+          </button>
+          <button className='suspend-button' onClick={suspendUser}>
+            {isSuspended ? 'Unsuspend' : 'Suspend'}
+          </button>
         </div>
       </div>
-
-      <div className='action-buttons' style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        gap: '1em',
-        marginLeft: '1em'
+      <div className='profile-card' style={{
+        border: '1px solid rgb(125, 125, 125, 0.15)',
+        boxShadow: '2px 2px 50px 5px rgb(125, 125, 125, 0.25)',
+        paddingBottom: '1em',
+        borderRadius: '.5em',
       }}>
-        <button className='edit-button' onClick={toggleEdit}>
-          {isEditing ? 'Cancel' : 'Edit'}
-        </button>
-        <button className='delete-button' onClick={deleteUser}>
-          Delete
-        </button>
-        <button className='suspend-button' onClick={suspendUser}>
-          {isSuspended ? 'Unsuspend' : 'Suspend'}
-        </button>
+        <div
+          className='profile-header'
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'start',
+          }}
+        >
+          <input
+            type='file'
+            accept='image/*'
+            style={{ display: 'none' }}
+            id='file-upload'
+            onChange={handleImageUpload}
+          />
+          <img
+            src={selectedImage || 'https://via.placeholder.com/100'}
+            alt='Profile'
+            className='profile-image'
+            onClick={() => document.getElementById('file-upload').click()}
+            style={{
+              width: '120px',
+              height: '120px',
+              objectFit: 'cover',
+              margin: '1em 2em',
+              borderRadius: '50%',
+              opacity: isSuspended ? '.6' : '1',
+              cursor: 'pointer',
+              border: '1px solid rgb(125, 125, 125, .3)'
+            }}
+          />
+          <div className='profile-info-header' style={{ width: '400px', padding: '1em' }}>
+            <h2
+              style={{
+                fontSize: '1.75em',
+                fontFamily: 'Rubik, sans-serif',
+                fontWeight: '600',
+                textTransform: 'capitalize',
+                margin: '0',
+                color: 'inherit',
+                opacity: isSuspended ? '.6' : '1',
+              }}
+            >
+              {formData.name || 'No Full Name'}
+            </h2>
+            <p
+              style={{
+                fontSize: '1.12em',
+                fontFamily: 'Rubik, sans-serif',
+                fontWeight: '400',
+                margin: '0 0 0 .5em',
+                opacity: isSuspended ? '.6' : '1',
+              }}
+            >
+              @ {formData.username || 'No username'}
+            </p>
+          </div>
+
+          <div
+            className='profile-info'
+            style={{
+              fontFamily: 'Inter, sans-serif',
+              fontSize: '16px',
+              flexGrow: '1',
+              marginRight: '5em',
+              padding: '1em 1.5em',
+              width: '400px',
+              lineHeight: '2',
+            }}
+          >
+            <div className='profile-row'>
+              <span className='label' style={{ opacity: isSuspended ? '.6' : '1', fontWeight: '800' }}>
+                Email:{' '}
+              </span>
+              <span className='value' style={{ opacity: isSuspended ? '.6' : '1' }}>
+                {formData.email || 'No Email'}
+              </span>
+            </div>
+            <div className='profile-row'>
+              <span className='label' style={{ opacity: isSuspended ? '.6' : '1', fontWeight: '800' }}>
+                Address:{' '}
+              </span>
+              <span className='value' style={{ opacity: isSuspended ? '.6' : '1' }}>
+                {formData.address || 'No Address'}
+              </span>
+            </div>
+            <div className='profile-row'>
+              <span className='label' style={{ opacity: isSuspended ? '.6' : '1', fontWeight: '800' }}>
+                Contact No:{' '}
+              </span>
+              <span className='value' style={{ opacity: isSuspended ? '.6' : '1' }}>
+                {formData.contact || 'No Contact number'}
+              </span>
+            </div>
+            <div className='profile-row'>
+              <span className='label' style={{ opacity: isSuspended ? '.6' : '1', fontWeight: '800' }}>
+                DOB:{' '}
+              </span>
+              <span className='value' style={{ opacity: isSuspended ? '.6' : '1' }}>
+                {formData.dob || 'No DOB'}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className='action-buttons' style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+          gap: '1em',
+          marginLeft: '1em'
+        }}>
+          <button className='edit-button' onClick={toggleEdit}>
+            {isEditing ? 'Cancel' : 'Edit'}
+          </button>
+          <button className='delete-button' onClick={deleteUser}>
+            Delete
+          </button>
+          <button className='suspend-button' onClick={suspendUser}>
+            {isSuspended ? 'Unsuspend' : 'Suspend'}
+          </button>
+        </div>
       </div>
+
+      <button
+        className='add-client-btn'
+        style={{
+          position: 'fixed',
+          top: '15em',
+          right: '1em',
+          border: '1px solid rgb(125, 125, 125, 0.5)',
+          borderRadius: '.25em',
+        }}
+        onClick={addNewUser}
+      >
+        Add New Client
+      </button>
 
       {showDialog && (
         <div className='dialog-overlay' onClick={handleOutsideClick}>

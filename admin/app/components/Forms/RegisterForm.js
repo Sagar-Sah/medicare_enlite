@@ -15,6 +15,11 @@ import Typography from '@mui/material/Typography';
 import ArrowForward from '@mui/icons-material/ArrowForward';
 import Icon from '@mui/material/Icon';
 import CircularProgress from '@mui/material/CircularProgress';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import { closeMsgAction } from 'enl-redux/actions/authActions';
 import { CheckboxRedux, TextFieldRedux } from './ReduxFormMUI';
@@ -45,6 +50,12 @@ function RegisterForm(props) {
   const { classes, cx } = useStyles();
   const mdUp = useMediaQuery(theme => theme.breakpoints.up('md'));
 
+  const [usage, setUsage] = React.useState('');
+
+  const handleChange = (event) => {
+    setUsage(event.target.value);
+  };
+
   const {
     handleSubmit,
     pristine,
@@ -52,7 +63,7 @@ function RegisterForm(props) {
     intl,
     messagesAuth,
     closeMsg,
-    loading
+    loading,
   } = props;
 
   return (
@@ -88,6 +99,44 @@ function RegisterForm(props) {
       }
       <section>
         <form onSubmit={handleSubmit}>
+          <div className='user_name' style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '.75em',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}>
+            <div className='first_name' style={{
+              Width: '',
+              flexGrow: '1'
+            }}>
+              <FormControl variant="standard" className={classes.formControl}>
+                <Field
+                  name="first_name"
+                  component={TextFieldRedux}
+                  placeholder={intl.formatMessage(messages.loginFieldFirstName)}
+                  label= {intl.formatMessage(messages.loginFieldFirstName)}
+                  required
+                  className={classes.field}
+                />
+              </FormControl>
+            </div>
+            <div className='last_name' style={{
+              Width: '',
+              flexGrow: '1'
+            }}>
+              <FormControl variant="standard" className={classes.formControl}>
+                <Field
+                  name="last_name"
+                  component={TextFieldRedux}
+                  placeholder={intl.formatMessage(messages.loginFieldLastName)}
+                  label= {intl.formatMessage(messages.loginFieldLastName)}
+                  required
+                  className={classes.field}
+                />
+              </FormControl>
+            </div>
+          </div>
           <div>
             <FormControl variant="standard" className={classes.formControl}>
               <Field
@@ -111,6 +160,118 @@ function RegisterForm(props) {
                 validate={[required, email]}
                 className={classes.field}
               />
+            </FormControl>
+          </div>
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '.75em',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}>
+            <div>
+              {/* trial */}
+              <PhoneInput
+                inputProps={{
+                  name: 'phone',
+                  required: true,
+                  autoFocus: true
+                }}
+              />
+            </div>
+            <div style={{
+              flexGrow: 1,
+            }}>
+              <FormControl variant="standard" className={classes.formControl}>
+                <Field
+                  name="phone_number"
+                  component={TextFieldRedux}
+                  placeholder= {intl.formatMessage(messages.loginFieldPhoneNumber)}
+                  label= {intl.formatMessage(messages.loginFieldPhoneNumber)}
+                  required
+                  className={classes.field}
+                />
+              </FormControl>
+            </div>
+          </div>
+          <div>
+            <FormControl variant="standard" className={classes.formControl}>
+              <Field
+                name="Company_name"
+                component={TextFieldRedux}
+                placeholder={intl.formatMessage(messages.loginFieldCompanyName)}
+                label= {intl.formatMessage(messages.loginFieldCompanyName)}
+                className={classes.field}
+              />
+            </FormControl>
+          </div>
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '.75em',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}>
+            <div style={{
+              minWidth: '',
+              flexGrow: 1,
+            }}>
+              <FormControl variant="standard" className={classes.formControl}>
+                <Field
+                  name="city"
+                  component={TextFieldRedux}
+                  placeholder= {intl.formatMessage(messages.loginFieldCity)}
+                  label= {intl.formatMessage(messages.loginFieldCity)}
+                  className={classes.field}
+                />
+              </FormControl>
+            </div>
+            <div style={{
+              minWidth: '',
+              flexGrow: 1,
+            }}>
+              <FormControl variant="standard" className={classes.formControl}>
+                <Field
+                  name="state"
+                  component={TextFieldRedux}
+                  placeholder= {intl.formatMessage(messages.loginFieldState)}
+                  label= {intl.formatMessage(messages.loginFieldState)}
+                  className={classes.field}
+                />
+              </FormControl>
+            </div>
+            <div style={{
+              minWidth: '',
+              flexGrow: 1,
+            }}>
+              <FormControl variant="standard" className={classes.formControl}>
+                <Field
+                  name="country"
+                  component={TextFieldRedux}
+                  placeholder= {intl.formatMessage(messages.loginFieldCountry)}
+                  label= {intl.formatMessage(messages.loginFieldCountry)}
+                  className={classes.field}
+                />
+              </FormControl>
+            </div>
+          </div>
+          <div>
+            <FormControl variant="standard" className={classes.formControl}>
+              <InputLabel id="medicarebot_usage">MedicareBot Usage</InputLabel>
+              <Select
+                labelId="medicarebot_usage"
+                id="medicarebot_usage"
+                // value={usage}    // this should be for backend set 1, 2, 3, as default
+                label="usage"
+                onChange={handleChange}
+              >
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value={1}>Personal Use</MenuItem>
+                <MenuItem value={2}>for client</MenuItem>
+                <MenuItem value={3}>as an Agent</MenuItem>
+              </Select>
             </FormControl>
           </div>
           <Grid container spacing={3}>

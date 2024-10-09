@@ -34,7 +34,7 @@ const ActivityLogs = () => (
             style={{
               marginBottom: '.5em',
               padding: '.75em 1em',
-              backgroundColor: 'rgb(125, 125, 125, 0.25)',
+              backgroundColor: 'rgb(0, 200, 0, 0.09)',
               display: 'flex',
               gap: '1em',
               justifyContent: 'space-between',

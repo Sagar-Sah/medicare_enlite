@@ -1,5 +1,6 @@
 .clientNavbar .nav-button{
-  background-color: rgb(125, 125, 125, .5);
+  background-color: rgb(0, 0, 150, .5);
+  color: white;
   transition: all .6s ease-out;
 }
 
@@ -11,11 +12,11 @@
 }
 
 .clientNavbar .nav-button.active {
-  background-color: rgb(125, 125, 125, 1);
+  background-color: rgb(0, 0, 150, 1);
   color: white;
 }
 
-.profile-card .dialog-overlay {
+.profile .dialog-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -28,13 +29,13 @@
   z-index: 10000;
 }
 
-.profile-card .dialog-box {
+.profile .dialog-box {
   background-color: rgb(240, 240, 230, .9);
   position: relative;
   padding: 3em 2em 2em 2em;
 }
 
-.profile-card .close-icon {
+.profile .close-icon {
   position: absolute;
   top: .5em;
   right: .5em;
@@ -52,11 +53,11 @@
   transition: all .3s ease-out;
 }
 
-.profile-card .close-icon:hover{
+.profile .close-icon:hover{
   background-color: blanchedalmond;
 }
 
-.profile-card .dialog-form .profile-row {
+.profile .dialog-form .profile-row {
   margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -64,7 +65,7 @@
   color: black;
 }
 
-.profile-card .dialog-form .profile-row input{
+.profile .dialog-form .profile-row input{
   flex-grow: 1;
   padding: .25em 1em;
   margin: 0 .25em;
@@ -72,11 +73,11 @@
   border-radius: .25em;
 }
 
-.profile-card .dialog-form .profile-row label{
+.profile .dialog-form .profile-row label{
   font-weight: 600;
 }
 
-.profile-card .dialog-form .submit-button {
+.profile  .dialog-form .submit-button {
   all: unset;
   text-align: center;
   width: 100%;
@@ -90,17 +91,17 @@
 }
 
 
-.profile-card .add-client-btn{
+.profile .add-client-btn{
   background-color: blue;
   color: white;
   transition: all .3s;
 }
 
-.profile-card .add-client-btn:hover{
+.profile .add-client-btn:hover{
   background-color: black;
 }
 
-.profile-card .edit-button, .delete-button, .suspend-button{
+.profile .profile-card .edit-button, .delete-button, .suspend-button{
   background-color: green;
   color: white;
   transition: all .3s;
@@ -109,7 +110,15 @@
   margin-top: 2em;
 }
 
-.profile-card :where(.edit-button, .delete-button, .suspend-button):hover{
+.profile .profile-card .delete-button{
+  background-color: rgb(150, 1, 1, 1);
+}
+
+.profile .profile-card .suspend-button{
+  background-color: rgb(150, 150, 1, 1);
+}
+
+.profile .profile-card :where(.edit-button, .delete-button, .suspend-button):hover{
   background-color: black;
 }
 

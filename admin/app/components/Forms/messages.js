@@ -28,9 +28,37 @@ export default defineMessages({
     id: `${scope}.Register.field.name`,
     defaultMessage: 'Username',
   },
+  loginFieldFirstName: {
+    id: `${scope}.Register.field.firstname`,
+    defaultMessage: 'First Name',
+  },
+  loginFieldLastName: {
+    id: `${scope}.Register.field.lastname`,
+    defaultMessage: 'Last Name',
+  },
   loginFieldEmail: {
     id: `${scope}.Login.field.email`,
     defaultMessage: 'Your Email',
+  },
+  loginFieldPhoneNumber: {
+    id: `${scope}.Login.field.phonenumber`,
+    defaultMessage: 'Phone Number',
+  },
+  loginFieldCompanyName: {
+    id: `${scope}.Login.field.companyname`,
+    defaultMessage: 'Company Name',
+  },
+  loginFieldCity: {
+    id: `${scope}.Login.field.city`,
+    defaultMessage: 'City',
+  },
+  loginFieldState: {
+    id: `${scope}.Login.field.state`,
+    defaultMessage: 'State',
+  },
+  loginFieldCountry: {
+    id: `${scope}.Login.field.country`,
+    defaultMessage: 'Country',
   },
   loginFieldPassword: {
     id: `${scope}.Login.field.password`,

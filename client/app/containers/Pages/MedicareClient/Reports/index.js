@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import brand from 'enl-api/dummy/brand';
 import { injectIntl } from 'react-intl';
+import BotPerformance from './BotPerformance';
+import UserEngagement from './UserEngagement';
+import BillingReport from './BillingReport';
+import Reports from './Reports';
 
 function ClientReports(props) {
   const title = `${brand.name} - Reports page`;
@@ -20,7 +24,11 @@ function ClientReports(props) {
         <meta property="twitter:description" content={description} />
       </Helmet>
       <div>
-        hello reports
+        <h1>Report and Performance Analytics Dashboard</h1>
+        <BotPerformance />
+        <UserEngagement />
+        <BillingReport />
+        <Reports />
       </div>
     </div>
   );
