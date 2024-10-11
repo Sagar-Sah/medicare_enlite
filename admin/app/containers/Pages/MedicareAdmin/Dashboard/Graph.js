@@ -6,7 +6,7 @@ const Graph = () => (
   <div style={{
     height: '328px',
     width: '700px',
-    boxShadow: '2px 2px 150px 50px rgb(125, 125, 125, 0.25) inset',
+    boxShadow: '2px 2px 150px 50px rgb(1, 1, 200, 0.25) inset',
     flexGrow: '1',
   }}>
     <ResponsiveLine

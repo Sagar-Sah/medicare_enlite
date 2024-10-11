@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -26,6 +26,7 @@ import { CheckboxRedux, TextFieldRedux } from './ReduxFormMUI';
 import MessagesForm from './MessagesForm';
 import messages from './messages';
 import useStyles from './user-jss';
+import './RegisterForm.css';
 
 // validation functions
 const required = value => (value === null ? 'Required' : undefined);
@@ -55,6 +56,7 @@ function RegisterForm(props) {
   const handleChange = (event) => {
     setUsage(event.target.value);
   };
+  const [value, setValue] = useState();
 
   const {
     handleSubmit,
@@ -163,36 +165,21 @@ function RegisterForm(props) {
             </FormControl>
           </div>
           <div style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '.75em',
-            alignItems: 'center',
-            justifyContent: 'space-between',
+            marginTop: '.85em',
           }}>
-            <div>
-              {/* trial */}
+            <FormControl variant="standard" className={classes.formControl}>
               <PhoneInput
-                inputProps={{
-                  name: 'phone',
-                  required: true,
-                  autoFocus: true
-                }}
+                placeholder="Enter phone number"
+                Country="US"
+                value={value}
+                onChange={setValue}
+                name="phone_number"
+                component={TextFieldRedux}
+                required
+                validate={[required, email]}
+                className={classes.field}
               />
-            </div>
-            <div style={{
-              flexGrow: 1,
-            }}>
-              <FormControl variant="standard" className={classes.formControl}>
-                <Field
-                  name="phone_number"
-                  component={TextFieldRedux}
-                  placeholder= {intl.formatMessage(messages.loginFieldPhoneNumber)}
-                  label= {intl.formatMessage(messages.loginFieldPhoneNumber)}
-                  required
-                  className={classes.field}
-                />
-              </FormControl>
-            </div>
+            </FormControl>
           </div>
           <div>
             <FormControl variant="standard" className={classes.formControl}>

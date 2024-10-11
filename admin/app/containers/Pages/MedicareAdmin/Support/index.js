@@ -96,7 +96,7 @@ function SupportManagement(props) {
             fontSize: '24px',
             fontWeight: 'bold',
             padding: '.75em 1em',
-            backgroundColor: 'rgb(125, 125, 125, .5)',
+            backgroundColor: 'rgb(1, 1, 200, 0.25)',
             borderRadius: '.25em',
             margin: '.5em .25em',
           }}>Support Bot</h2>
@@ -113,7 +113,7 @@ function SupportManagement(props) {
                 marginBottom: '10px',
                 borderRadius: '.25em',
                 margin: '.5em',
-                backgroundColor: 'rgb(115, 115, 115, .15)',
+                backgroundColor: 'rgb(1, 1, 200, 0.08)',
               }}
             >
               {botMessages.map((msg, index) => (
@@ -132,6 +132,8 @@ function SupportManagement(props) {
                 padding: '.75em 1em',
                 margin: '.5em',
                 borderRadius: '.25em',
+                backgroundColor: 'rgb(1, 1, 200, 0.05)',
+                color: 'inherit'
               }}
             />
             <button id="send-message" onClick={handleSendMessage} style={{
@@ -148,7 +150,7 @@ function SupportManagement(props) {
             fontSize: '24px',
             fontWeight: 'bold',
             padding: '.75em 1em',
-            backgroundColor: 'rgb(125, 125, 125, .5)',
+            backgroundColor: 'rgb(1, 1, 200, 0.25)',
             borderRadius: '.25em',
             margin: '1.5em .25em',
           }}

@@ -18,23 +18,22 @@ const RecentActivities = () => (
     }}
   >
     <ListItem
-      sx={{
-        bgcolor: 'rgb(125, 125, 125, 0.25)',
-        marginBottom: '.5em',
-        padding: 'auto .25em',
-        fontWeight: 'bold',
-        textTransform: 'uppercase',
-      }}
-    >
-      <ListItemText>Recent Activities</ListItemText>
-    </ListItem>
-    <ListItem
-      sx={{
+      style={{
         alignItems: 'center',
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        bgcolor: 'rgb(125, 125, 125, 0.25)',
+        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+      }}>
+      <ListItemText>Recent Activities</ListItemText>
+    </ListItem>
+    <ListItem
+      style={{
+        alignItems: 'center',
+        marginBottom: '.5em',
+        padding: '.25em 1em',
+        overflow: 'hidden',
+        backgroundColor: 'rgb(1, 1, 200, 0.125)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
@@ -59,12 +58,12 @@ const RecentActivities = () => (
       />
     </ListItem>
     <ListItem
-      sx={{
+      style={{
         alignItems: 'center',
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        bgcolor: 'rgb(125, 125, 125, 0.25)',
+        backgroundColor: 'rgb(1, 1, 200, 0.125)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
@@ -92,12 +91,12 @@ const RecentActivities = () => (
       />
     </ListItem>
     <ListItem
-      sx={{
+      style={{
         alignItems: 'center',
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        bgcolor: 'rgb(125, 125, 125, 0.25)',
+        backgroundColor: 'rgb(1, 1, 200, 0.125)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
@@ -122,12 +121,12 @@ const RecentActivities = () => (
       />
     </ListItem>
     <ListItem
-      sx={{
+      style={{
         alignItems: 'center',
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        bgcolor: 'rgb(125, 125, 125, 0.25)',
+        backgroundColor: 'rgb(1, 1, 200, 0.125)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
@@ -152,12 +151,12 @@ const RecentActivities = () => (
       />
     </ListItem>
     <ListItem
-      sx={{
+      style={{
         alignItems: 'center',
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        bgcolor: 'rgb(125, 125, 125, 0.25)',
+        backgroundColor: 'rgb(1, 1, 200, 0.125)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
