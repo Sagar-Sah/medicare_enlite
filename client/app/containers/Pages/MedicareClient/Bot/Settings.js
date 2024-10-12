@@ -158,6 +158,7 @@ const Settings = () => {
           <div style={{
             display: 'flex',
             gap: '1em',
+            flexWrap: 'wrap',
             alignItems: 'center'
           }}>
             <button className="data-action" onClick={handleBackupData}

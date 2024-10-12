@@ -10,7 +10,7 @@ const BotPerformance = () => {
   return (
     <div style={{
       margin: '1em',
-      padding: '1.5em',
+      padding: '1em',
       borderRadius: '.5em',
       boxShadow: '2px 2px 50px 2px rgb(125, 125, 125, 0.2)',
       flexGrow: '1',
