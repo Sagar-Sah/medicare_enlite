@@ -19,22 +19,30 @@ const CustomizeGraph = ({ onBack, botData }) => {
   };
 
   return (
-    <Card>
+    <Card style={{ padding: '0 .5em' }}>
       <CardContent>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" gutterBottom style={{
+          padding: '.5em',
+          fontSize: '1em',
+          fontFamily: 'Inter, sans-serif',
+        }}>
           Customize Your Graph
         </Typography>
 
-        <FormControl fullWidth style={{ marginBottom: '20px' }}>
-          <InputLabel>Chart Type</InputLabel>
+        <FormControl fullWidth style={{ margin: '1em 0' }}>
+          <InputLabel style={{
+            marginTop: '-0.5em'
+          }}>Chart Type</InputLabel>
           <Select value={chartType} onChange={handleChartTypeChange}>
             <MenuItem value="LineChart">Line Chart</MenuItem>
             <MenuItem value="BarChart">Bar Chart</MenuItem>
           </Select>
         </FormControl>
 
-        <FormControl fullWidth style={{ marginBottom: '20px' }}>
-          <InputLabel>Data Key</InputLabel>
+        <FormControl fullWidth style={{ margin: '1em 0' }}>
+          <InputLabel style={{
+            marginTop: '-0.5em'
+          }}>Data Key</InputLabel>
           <Select value={dataKey} onChange={handleDataKeyChange}>
             <MenuItem value="responses">Responses</MenuItem>
             <MenuItem value="successRate">Success Rate</MenuItem>

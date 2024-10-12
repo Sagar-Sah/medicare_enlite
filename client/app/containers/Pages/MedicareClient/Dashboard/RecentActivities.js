@@ -6,7 +6,12 @@ import {
 const RecentActivities = ({ activities }) => (
   <Card>
     <CardContent>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" gutterBottom style={{
+        padding: '.25em 1em',
+        fontSize: '.9em',
+        fontWeight: '800',
+        fontFamily: 'Inter, sans-serif'
+      }}>
         Recent Activities
       </Typography>
       <List>

@@ -8,8 +8,18 @@ const BotPerformance = () => {
   const performanceData = data.performanceData[0].data;
 
   return (
-    <div>
-      <h6>Bot Performance Overview</h6>
+    <div style={{
+      margin: '1em',
+      padding: '1.5em',
+      borderRadius: '.5em',
+      boxShadow: '2px 2px 50px 2px rgb(125, 125, 125, 0.2)'
+    }}>
+      <h6 style={{
+        padding: '0 .5em',
+        fontSize: '1em',
+        margin: '1em 0',
+        fontFamily: 'Inter, sans-serif',
+      }}>Bot Performance Overview</h6>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={performanceData}>
           <CartesianGrid strokeDasharray="3 3" />

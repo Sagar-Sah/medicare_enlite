@@ -97,31 +97,63 @@ function ClientBilling(props) {
         <meta property="twitter:description" content={description} />
       </Helmet>
       <div className='main container'>
-        <Typography variant="h4" style={{ marginBottom: '20px', textAlign: 'center' }}>
+        <Typography variant="h4" style={{
+          marginBottom: '1.5em',
+          fontSize: '1.25em',
+          fontFamily: 'Inter, sans-serif',
+          fontWeight: '800',
+          backgroundColor: 'rgb(2, 3, 220, .5)',
+          padding: '.75em 1em',
+          borderRadius: '.5em',
+        }}>
           Billing Management Dashboard
         </Typography>
 
         {/* Subscription Plans */}
-        <Card style={{ marginBottom: '20px' }}>
+        <Card style={{ margin: '1em', padding: '0.5em' }}>
           <CardContent>
-            <Typography variant="h6">Subscription Plans</Typography>
+            <Typography variant="h6" style={{
+              padding: '0 .5em',
+              fontSize: '1em',
+              fontFamily: 'Inter, sans-serif',
+            }}>Subscription Plans</Typography>
             <TableContainer>
               <Table>
                 <TableHead>
                   <TableRow>
-                    <TableCell>Plan</TableCell>
-                    <TableCell>Price</TableCell>
-                    <TableCell>Features</TableCell>
-                    <TableCell>Billing Cycle</TableCell>
+                    <TableCell style={{
+                      padding: '.5em'
+                    }}>Plan</TableCell>
+                    <TableCell style={{
+                      padding: '.5em'
+                    }}>Price</TableCell>
+                    <TableCell style={{
+                      padding: '.5em'
+                    }}>Features</TableCell>
+                    <TableCell style={{
+                      padding: '.5em'
+                    }}>Billing Cycle</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {subscriptions.map((subscription) => (
                     <TableRow key={subscription.id}>
-                      <TableCell>{subscription.plan}</TableCell>
-                      <TableCell>${subscription.price}</TableCell>
-                      <TableCell>{subscription.features.join(', ')}</TableCell>
-                      <TableCell>{subscription.billingCycle}</TableCell>
+                      <TableCell style={{
+                        padding: '1em .5em',
+                        fontFamily: 'Inter, sans-serif',
+                      }}>{subscription.plan}</TableCell>
+                      <TableCell style={{
+                        padding: '1em .5em',
+                        fontFamily: 'Inter, sans-serif',
+                      }}>${subscription.price}</TableCell>
+                      <TableCell style={{
+                        padding: '1em .5em',
+                        fontFamily: 'Inter, sans-serif',
+                      }}>{subscription.features.join(', ')}</TableCell>
+                      <TableCell style={{
+                        padding: '1em .5em',
+                        fontFamily: 'Inter, sans-serif',
+                      }}>{subscription.billingCycle}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -131,24 +163,46 @@ function ClientBilling(props) {
         </Card>
 
         {/* Billing History */}
-        <Card style={{ marginBottom: '20px' }}>
+        <Card style={{ margin: '1em', padding: '.5em' }}>
           <CardContent>
-            <Typography variant="h6">Billing History</Typography>
+            <Typography variant="h6" style={{
+              padding: '0 .5em',
+              fontSize: '1em',
+              fontFamily: 'Inter, sans-serif',
+            }}>Billing History</Typography>
             <TableContainer>
               <Table>
                 <TableHead>
                   <TableRow>
-                    <TableCell>Date</TableCell>
-                    <TableCell>Amount</TableCell>
-                    <TableCell>Plan</TableCell>
+                    <TableCell style={{
+                      padding: '1em .5em',
+                      fontFamily: 'Inter, sans-serif',
+                    }}>Date</TableCell>
+                    <TableCell style={{
+                      padding: '1em .5em',
+                      fontFamily: 'Inter, sans-serif',
+                    }}>Amount</TableCell>
+                    <TableCell style={{
+                      padding: '1em .5em',
+                      fontFamily: 'Inter, sans-serif',
+                    }}>Plan</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {billingHistory.map((bill, index) => (
                     <TableRow key={index}>
-                      <TableCell>{bill.date}</TableCell>
-                      <TableCell>${bill.amount}</TableCell>
-                      <TableCell>{bill.plan}</TableCell>
+                      <TableCell style={{
+                        padding: '1em .5em',
+                        fontFamily: 'Inter, sans-serif',
+                      }}>{bill.date}</TableCell>
+                      <TableCell style={{
+                        padding: '1em .5em',
+                        fontFamily: 'Inter, sans-serif',
+                      }}>${bill.amount}</TableCell>
+                      <TableCell style={{
+                        padding: '1em .5em',
+                        fontFamily: 'Inter, sans-serif',
+                      }}>{bill.plan}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -181,9 +235,16 @@ function ClientBilling(props) {
         </Card>
 
         {/* Conversation Costs */}
-        <Card>
+        <Card style={{
+          margin: '1em',
+          padding: '.5em'
+        }}>
           <CardContent>
-            <Typography variant="h6">Conversation Costs</Typography>
+            <Typography variant="h6" style={{
+              padding: '0 .5em',
+              fontSize: '1em',
+              fontFamily: 'Inter, sans-serif',
+            }}>Conversation Costs</Typography>
             <TableContainer>
               <Table>
                 <TableHead>

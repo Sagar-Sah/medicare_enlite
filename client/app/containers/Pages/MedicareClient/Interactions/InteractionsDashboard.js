@@ -21,7 +21,15 @@ const InteractionsDashboard = () => {
 
   return (
     <div style={{ padding: '20px' }}>
-      <Typography variant="h4" style={{ marginBottom: '20px', textAlign: 'center' }}>
+      <Typography variant="h4" style={{
+        marginBottom: '1.5em',
+        fontSize: '1.25em',
+        fontFamily: 'Inter, sans-serif',
+        fontWeight: '800',
+        backgroundColor: 'rgb(2, 3, 220, .5)',
+        padding: '.75em 1em',
+        borderRadius: '.5em',
+      }}>
         Interactions Management Dashboard
       </Typography>
       <Card>

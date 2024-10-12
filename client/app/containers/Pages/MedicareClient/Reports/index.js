@@ -24,7 +24,15 @@ function ClientReports(props) {
         <meta property="twitter:description" content={description} />
       </Helmet>
       <div>
-        <h1>Report and Performance Analytics Dashboard</h1>
+        <h1 style={{
+          marginBottom: '1.5em',
+          fontSize: '1.25em',
+          fontFamily: 'Inter, sans-serif',
+          fontWeight: '800',
+          backgroundColor: 'rgb(2, 3, 220, .5)',
+          padding: '.75em 1em',
+          borderRadius: '.5em',
+        }}>Report and Performance Analytics Dashboard</h1>
         <BotPerformance />
         <UserEngagement />
         <BillingReport />

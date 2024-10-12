@@ -8,10 +8,10 @@ import {
 } from '@mui/material';
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
-} from 'recharts'; // Import required components from recharts
+} from 'recharts';
 import RecentActivities from './RecentActivities';
 import CustomizeGraph from './CustomizeGraph';
-import data from './data.json'; // Import the JSON data
+import data from './data.json';
 
 function ClientDashboard(props) {
   const title = `${brand.name} - Bot page`;
@@ -19,12 +19,12 @@ function ClientDashboard(props) {
   const { intl } = props;
 
   const [bots, setBots] = useState([]);
-  const [selectedBotId, setSelectedBotId] = useState(1); // Default to the first bot
+  const [selectedBotId, setSelectedBotId] = useState(1);
   const [selectedBotData, setSelectedBotData] = useState({});
-  const [customizing, setCustomizing] = useState(false); // State to handle customization mode
+  const [customizing, setCustomizing] = useState(false);
 
   useEffect(() => {
-    setBots(data.bots || []); // Set the list of bots from the JSON file and handle empty data
+    setBots(data.bots || []);
   }, []);
 
   // Update the selected bot's data when a new bot is selected
@@ -58,14 +58,31 @@ function ClientDashboard(props) {
         <meta property="twitter:description" content={description} />
       </Helmet>
       <div style={{ padding: '20px' }}>
-        <Typography variant="h4" style={{ marginBottom: '20px', textAlign: 'center' }}>
+        <Typography variant="h4" style={{
+          marginBottom: '1.5em',
+          fontSize: '1.25em',
+          fontFamily: 'Inter, sans-serif',
+          fontWeight: '800',
+          backgroundColor: 'rgb(2, 3, 220, .5)',
+          padding: '.75em 1em',
+          borderRadius: '.5em',
+        }}>
           Client Bot Dashboard Overview
         </Typography>
 
         {/* Bot Selection Dropdown */}
-        <FormControl fullWidth style={{ marginBottom: '20px' }}>
-          <InputLabel>Select a Bot</InputLabel>
-          <Select value={selectedBotId} onChange={handleBotSelectionChange}>
+        <FormControl fullWidth style={{
+          margin: '.75em 0',
+        }}>
+          <InputLabel style={{
+            margin: '-0.5em',
+            fontWeight: '800',
+            fontFamily: 'Inter, sans-serif',
+          }}>Select a Bot</InputLabel>
+          <Select value={selectedBotId} onChange={handleBotSelectionChange} style={{
+            padding: '.25em 1em',
+            marginBottom: '1em'
+          }}>
             {bots.map((bot) => (
               <MenuItem key={bot.id} value={bot.id}>
                 {bot.name}
@@ -81,7 +98,13 @@ function ClientDashboard(props) {
               <Grid item xs={12} md={8}>
                 <Card>
                   <CardContent>
-                    <Typography variant="h6" gutterBottom>
+                    <Typography variant="h6" gutterBottom style={{
+                      padding: '.25em 1em',
+                      fontSize: '.9em',
+                      marginBottom: '.75em',
+                      fontWeight: '800',
+                      fontFamily: 'Inter, sans-serif'
+                    }}>
                       {selectedBotData?.name} Performance Overview
                     </Typography>
                     {/* Check if performanceData exists before rendering */}
@@ -111,8 +134,20 @@ function ClientDashboard(props) {
             </Grid>
 
             {/* Customize Graph Section */}
-            <div style={{ marginTop: '30px', textAlign: 'center' }}>
-              <Typography variant="h6">Customize {selectedBotData?.name}'s Graph</Typography>
+            <div style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '1em',
+              alignItems: 'center',
+              justifyContent: 'start',
+              margin: '1em'
+            }}>
+              <Typography variant="h6" style={{
+                fontSize: '.9em',
+                marginTop: '.5em',
+                fontWeight: '800',
+                fontFamily: 'Inter, sans-serif'
+              }}>Customize {selectedBotData?.name}'s Graph</Typography>
               <Button variant="contained" color="primary" style={{ marginTop: '10px' }} onClick={handleCustomizeClick}>
                 Customize Graphs
               </Button>
