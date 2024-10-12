@@ -51,11 +51,13 @@ const DeactivatedBots = () => {
   return (
     <section className="deactivated-bots">
       <h2 style={{
-        padding: '.75em 1.25em',
-        backgroundColor: 'rgb(105, 155, 245, 0.5)',
-        borderRadius: '.35em',
-        margin: '.5em .5em 1em .5em',
-        fontSize: '1.35em'
+        marginBottom: '1.5em',
+        fontSize: '1.25em',
+        fontFamily: 'Inter, sans-serif',
+        fontWeight: '800',
+        backgroundColor: 'rgb(2, 3, 220, .5)',
+        padding: '.75em 1em',
+        borderRadius: '.5em',
       }}
       >Deactivated Bots</h2>
       <div className="deactivated-container" style={{
@@ -130,7 +132,8 @@ const DeactivatedBots = () => {
         <button className="reactivate-bot" onClick={handleReactivateAll}
           style={{
             margin: '1em 1em 1.5em 2.25em',
-            padding: '.65em 1.5em'
+            padding: '.65em 1.5em',
+            backgroundColor: 'rgba(0, 100, 250, .5)'
           }}
         >
           Reactivate Selected Bots

@@ -17,9 +17,8 @@
 }
 
 .main.active-bots.container   .view-all-btn {
-  background-color: green;
+  background-color: rgba(0, 100, 250, .5);
   transition: background-color 0.3s, transform 0.2s;
-  width: 100%;
 }
 
 .main.active-bots.container   .view-all-btn:hover {

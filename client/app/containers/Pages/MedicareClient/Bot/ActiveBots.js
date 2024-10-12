@@ -171,11 +171,13 @@ const ActiveBots = () => {
   return (
     <section className="main active-bots container">
       <h2 style={{
-        padding: '.75em 1.25em',
-        backgroundColor: 'rgb(105, 155, 245, 0.5)',
-        borderRadius: '.35em',
-        margin: '.5em',
-        fontSize: '1.35em'
+        marginBottom: '1.5em',
+        fontSize: '1.25em',
+        fontFamily: 'Inter, sans-serif',
+        fontWeight: '800',
+        backgroundColor: 'rgb(2, 3, 220, .5)',
+        padding: '.75em 1em',
+        borderRadius: '.5em',
       }}>Active Bots</h2>
       <div className="bot-list" style={{
         display: 'flex',
@@ -191,14 +193,15 @@ const ActiveBots = () => {
       </div>
       {activeBots.length > 2 && !showAll && (
         <div className="view-all-container" style={{
-          width: '100%',
+          width: '98%',
           display: 'flex',
+          justifyContent: 'flex-end',
         }}>
           <button className="view-all-btn" onClick={handleViewAllClick} style={{
-            padding: '.85em 1.5em',
+            padding: '1em 2em',
             fontSize: '.9em',
             margin: '1em',
-            color: 'white',
+            color: 'inherit'
           }}>
             View All
           </button>

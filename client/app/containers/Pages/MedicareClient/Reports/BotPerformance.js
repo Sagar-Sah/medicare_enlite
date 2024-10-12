@@ -12,7 +12,10 @@ const BotPerformance = () => {
       margin: '1em',
       padding: '1.5em',
       borderRadius: '.5em',
-      boxShadow: '2px 2px 50px 2px rgb(125, 125, 125, 0.2)'
+      boxShadow: '2px 2px 50px 2px rgb(125, 125, 125, 0.2)',
+      flexGrow: '1',
+      minWidth: '320px',
+      width: '500px'
     }}>
       <h6 style={{
         padding: '0 .5em',
@@ -20,7 +23,7 @@ const BotPerformance = () => {
         margin: '1em 0',
         fontFamily: 'Inter, sans-serif',
       }}>Bot Performance Overview</h6>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer height={300}>
         <LineChart data={performanceData}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />

@@ -5,11 +5,13 @@ import clientImage from './client.png';
 const ActivityLogs = () => (
   <div className="activitylogs-container">
     <h1 style={{
-      padding: '.75em 1.25em',
-      backgroundColor: 'rgb(105, 155, 245, 0.5)',
-      borderRadius: '.35em',
-      margin: '.5em .5em 1em .5em',
-      fontSize: '1.35em'
+      marginBottom: '1.5em',
+      fontSize: '1.25em',
+      fontFamily: 'Inter, sans-serif',
+      fontWeight: '800',
+      backgroundColor: 'rgb(2, 3, 220, .5)',
+      padding: '.75em 1em',
+      borderRadius: '.5em',
     }}
     >Activity Logs</h1>
     <div style={{
@@ -34,12 +36,12 @@ const ActivityLogs = () => (
             style={{
               marginBottom: '.5em',
               padding: '.75em 1em',
-              backgroundColor: 'rgb(0, 200, 0, 0.09)',
+              backgroundColor: 'rgba(0, 100, 250, .15)',
               display: 'flex',
               gap: '1em',
               justifyContent: 'space-between',
               alignItems: 'center',
-              borderRadius: '.25em'
+              borderRadius: '.5em'
             }}
           >
             <div style={{

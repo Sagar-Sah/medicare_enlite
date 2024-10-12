@@ -55,13 +55,13 @@ const BotAnalytics = () => {
     <section className="analytics">
       <header>
         <h1 style={{
-          padding: '.75em 1.25em',
-          backgroundColor: 'rgb(105, 155, 245, 0.5)',
-          borderRadius: '.35em',
-          margin: '.5em',
-          fontSize: '1.35em',
-          color: 'inherit',
-          textAlign: 'left',
+          marginBottom: '1.5em',
+          fontSize: '1.25em',
+          fontFamily: 'Inter, sans-serif',
+          fontWeight: '800',
+          backgroundColor: 'rgb(2, 3, 220, .5)',
+          padding: '.75em 1em',
+          borderRadius: '.5em',
         }}>Bot Analytics</h1>
       </header>
       <div className="analytics-container" style={{

@@ -51,23 +51,49 @@ const Reports = () => {
   };
 
   return (
-    <div>
-      <h2>Report and Performance Analytics Dashboard</h2>
+    <div style={{
+      margin: '1em',
+      padding: '1em',
+      borderRadius: '.5em',
+      boxShadow: '2px 2px 50px 2px rgb(125, 125, 125, 0.2)',
+      flexGrow: '1',
+      minWidth: '320px',
+    }}>
+      <h2 style={{
+        padding: '0 .5em',
+        fontSize: '1em',
+        margin: '1em 0',
+        fontFamily: 'Inter, sans-serif',
+      }}>Report and Performance Analytics Dashboard</h2>
 
       {/* Table to display billing details */}
-      <TableContainer component={Paper} style={{ marginBottom: '20px' }}>
-        <Table>
+      <TableContainer component={Paper} style={{
+        backgroundColor: 'inherit',
+        padding: '1em'
+      }}>
+        <Table style={{
+          maxHeight: '400px',
+          overflow: 'auto'
+        }}>
           <TableHead>
             <TableRow>
-              <TableCell>Date</TableCell>
-              <TableCell>Amount</TableCell>
+              <TableCell style={{
+                padding: '.5em'
+              }}>Date</TableCell>
+              <TableCell style={{
+                padding: '.5em'
+              }}>Amount</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {data.billingData.map((item, index) => (
               <TableRow key={index}>
-                <TableCell>{item.date}</TableCell>
-                <TableCell>{item.amount}</TableCell>
+                <TableCell style={{
+                  padding: '.5em'
+                }}>{item.date}</TableCell>
+                <TableCell style={{
+                  padding: '.5em'
+                }}>{item.amount}</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -75,7 +101,10 @@ const Reports = () => {
       </TableContainer>
 
       {/* Dropdown for format selection */}
-      <FormControl variant="outlined" style={{ minWidth: 120, marginBottom: '20px' }}>
+      <FormControl variant="outlined" style={{
+        minWidth: 120,
+        margin: '1.5em'
+      }}>
         <Select value={exportFormat} onChange={handleFormatChange}>
           <MenuItem value="PDF">PDF</MenuItem>
           <MenuItem value="CSV">CSV</MenuItem>
@@ -87,6 +116,9 @@ const Reports = () => {
         variant="contained"
         color="primary"
         onClick={handleDownload}
+        style={{
+          margin: '1.5em',
+        }}
       >
         Download Report
       </Button>

@@ -1,12 +1,11 @@
 /* Navbar styles */
 .clientNavbar .nav-button {
-  background-color: rgba(0, 0, 150, 0.5);
-  color: white;
+  background-color: rgba(0, 0, 150, 0.2);
   transition: all 0.6s ease-out;
 }
 
 .clientNavbar .nav-button:hover {
-  background-color: rgba(125, 125, 125, 0.8);
+  background-color: rgba(0, 100, 250, 0.8);
 }
 
 .clientNavbar .nav-button:active {
@@ -20,9 +19,7 @@
 
 
 
-
-/* Modal Styling */
-.modal {
+.main.container.training-data .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -32,13 +29,13 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 999;
+  z-index: 10000;
 }
 
-.modal-content {
+.main.container.training-data .modal-content {
   background-color: white;
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: .5em;
   width: 400px;
   max-width: 90%;
   display: flex;
@@ -47,20 +44,21 @@
   overflow-y: auto;
 }
 
-.modal-content h2 {
+.main.container.training-data .modal-content h2 {
   margin-bottom: 1.5rem;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: #333;
   text-align: center;
 }
 
-.modal-content label {
+.main.container.training-data .modal-content label {
   margin-bottom: 0.5rem;
   font-size: 1rem;
   color: #495057;
+  font-family: "Inter";
 }
 
-.modal-content input {
+.main.container.training-data .modal-content input {
   margin-bottom: 1rem;
   padding: 0.75rem;
   font-size: 1rem;
@@ -68,31 +66,34 @@
   border: 1px solid #dee2e6;
   border-radius: 5px;
   transition: border-color 0.2s;
+  font-family: "Inter";
 }
 
-.modal-content input:focus {
+.main.container.training-data .modal-content input:focus {
   border-color: #007bff;
   outline: none;
 }
 
-.input-error {
-  border-color: #dc3545 !important; /* Red border for validation error */
+.main.container.training-data .input-error {
+  border-color: #dc3545 !important; 
 }
 
-.error-message {
+.main.container.training-data .error-message {
   color: #dc3545;
   font-size: 0.875rem;
   margin-top: -0.75rem;
   margin-bottom: 1rem;
 }
 
-.modal-actions {
+.main.container.training-data .modal-actions {
   display: flex;
+  gap: 1em;
   justify-content: space-between;
 }
 
-.modal-actions button {
-  padding: 0.75rem 3.5rem;
+.main.container.training-data .modal-actions button {
+  padding: 0.75rem 1em;
+  flex-grow: 1;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
@@ -100,21 +101,21 @@
   transition: background-color 0.3s ease;
 }
 
-.modal-actions button:first-child {
+.main.container.training-data .modal-actions button:first-child {
   background-color: #28a745;
   color: white;
 }
 
-.modal-actions button:last-child {
+.main.container.training-data .modal-actions button:last-child {
   background-color: #dc3545;
   color: white;
 }
 
-.modal-actions button:first-child:hover {
+.main.container.training-data .modal-actions button:first-child:hover {
   background-color: #218838;
 }
 
-.modal-actions button:last-child:hover {
+.main.container.training-data .modal-actions button:last-child:hover {
   background-color: #c82333;
 }
 
@@ -122,12 +123,12 @@
 
 
 .top-queries li {
-  background-color: #e0f7fa;  
-  transition: background-color 0.3s;
+  background-color: rgba(0, 100, 250, .15);  
+  transition: all 0.3s ease-in-out;
 }
 
 .top-queries li:hover {
-  background-color: #b2ebf2; /* Darker shade on hover */
+  background-color: rgba(0, 150, 255, .4);  
 }
 
 
@@ -142,67 +143,38 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-.settings-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+.settings-container .api_url_input{
+  border: 1px solid rgb(150, 150, 150, .5);;
+  transition: all .5s ease-out;
 }
 
-.settings-container .settings-section {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1em;
-  margin: 1em !important;
+.settings-container .api_url_input:focus{
+  border: 1px solid rgb(1, 200, 1, .4);
+  box-shadow: 2px 2px 50px 2px rgb(1, 200, 1, .07);
 }
 
 
-.settings-container input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border-radius: 4px;
-  transition: border-color 0.3s;
-}
 
-.settings-container button {
-  padding: 10px 15px;
-  background-color: #007bff;
+
+.settings-container :where(.save-settings, .save-notifications, .data-action){
+  background-color: rgb(1, 80, 220, .7);
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all .3 ease-in-out;
 }
 
-.settings-container button:hover {
-  background-color: #0056b3;
+.settings-container :where(.save-settings, .save-notifications, .data-action):hover{
+  background-color: rgb(1, 50, 120, 1);
+  color: white;
 }
 
-.settings-container .notification-label {
-  display: flex; 
-  align-items: center;
-}
-
-.settings-container .data-action {
-  margin-right: 10px;
-  margin-top: 10px;
-}
 
 .settings-container .delete-data {
-  background-color: #dc3545;
+  background-color: rgb(255, 0, 0, 1);
+  transition: all .3s ease-in-out;
 }
 
 .settings-container .delete-data:hover {
-  background-color: #c82333;
+  background-color: rgb(105, 0, 0, 1);
 }
 
 .settings-container .status-message {
@@ -217,46 +189,12 @@
 
 
 
-
-
-/* For User Feadback */
-.feedback {
-  width: 100%;
-}
-
-.feedback header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-
-.feedback .feedback-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 1em 1.5em;
-}
-
-.feedback  .feedback-list {
-  padding-left: 0;
-  list-style: none;
-}
-
-.feedback .feedback-list li {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-}
-
 .feedback  button {
-  padding: 10px;
-  background-color: #007bff;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
+  background-color: rgb(1, 100, 250, .7);
+  transition: all .3s ease-in-out;
 }
 
 .feedback  button:hover {
-  background-color: #0056b3;
+  background-color: rgb(1, 50, 200, 1);
+  color: white;
 }

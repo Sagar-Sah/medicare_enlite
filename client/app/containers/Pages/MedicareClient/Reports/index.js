@@ -33,10 +33,17 @@ function ClientReports(props) {
           padding: '.75em 1em',
           borderRadius: '.5em',
         }}>Report and Performance Analytics Dashboard</h1>
-        <BotPerformance />
-        <UserEngagement />
-        <BillingReport />
-        <Reports />
+        <div style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '.25em',
+          justifyContent: 'space-between'
+        }}>
+          <BotPerformance />
+          <UserEngagement />
+          <BillingReport />
+          <Reports />
+        </div>
       </div>
     </div>
   );

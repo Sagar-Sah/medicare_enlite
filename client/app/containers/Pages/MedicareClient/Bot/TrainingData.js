@@ -40,11 +40,13 @@ const TrainingData = () => {
   return (
     <section className="main container training-data">
       <h2 style={{
-        padding: '.75em 1.25em',
-        backgroundColor: 'rgb(105, 155, 245, 0.5)',
-        borderRadius: '.35em',
-        margin: '.5em',
-        fontSize: '1.35em'
+        marginBottom: '1.5em',
+        fontSize: '1.25em',
+        fontFamily: 'Inter, sans-serif',
+        fontWeight: '800',
+        backgroundColor: 'rgb(2, 3, 220, .5)',
+        padding: '.75em 1em',
+        borderRadius: '.5em',
       }}>
         Training Data
       </h2>

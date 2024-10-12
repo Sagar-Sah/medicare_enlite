@@ -130,10 +130,13 @@ function MedicareClientSettings(props) {
         }}>
           <h3
             style={{
+              marginBottom: '1.5em',
               fontSize: '1.25em',
-              padding: '.75em',
-              backgroundColor: 'rgb(125, 125, 125, 0.5)',
-              borderRadius: '.25em'
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: '800',
+              backgroundColor: 'rgb(2, 3, 220, .5)',
+              padding: '.75em 1em',
+              borderRadius: '.5em',
             }}>Configure Bots</h3>
           <label style={{
             padding: '.5em',
@@ -251,10 +254,13 @@ function MedicareClientSettings(props) {
         }}>
           <h3
             style={{
+              marginBottom: '1.5em',
               fontSize: '1.25em',
-              padding: '.75em',
-              backgroundColor: 'rgb(125, 125, 125, 0.5)',
-              borderRadius: '.25em'
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: '800',
+              backgroundColor: 'rgb(2, 3, 220, .5)',
+              padding: '.75em 1em',
+              borderRadius: '.5em',
             }}>Website Crawling</h3>
           <input
             type="text"
@@ -352,10 +358,13 @@ function MedicareClientSettings(props) {
         }}>
           <h3
             style={{
+              marginBottom: '1.5em',
               fontSize: '1.25em',
-              padding: '.75em',
-              backgroundColor: 'rgb(125, 125, 125, 0.5)',
-              borderRadius: '.25em'
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: '800',
+              backgroundColor: 'rgb(2, 3, 220, .5)',
+              padding: '.75em 1em',
+              borderRadius: '.5em',
             }}>Bot Customization</h3>
           <label style={{
             marginTop: '1.5em',
@@ -455,10 +464,13 @@ function MedicareClientSettings(props) {
         }}>
           <h3
             style={{
+              marginBottom: '1.5em',
               fontSize: '1.25em',
-              padding: '.75em',
-              backgroundColor: 'rgb(125, 125, 125, 0.5)',
-              borderRadius: '.25em'
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: '800',
+              backgroundColor: 'rgb(2, 3, 220, .5)',
+              padding: '.75em 1em',
+              borderRadius: '.5em',
             }}>Code Integration</h3>
           <input
             type="text"
@@ -497,10 +509,13 @@ function MedicareClientSettings(props) {
         }}>
           <h3
             style={{
+              marginBottom: '1.5em',
               fontSize: '1.25em',
-              padding: '.75em',
-              backgroundColor: 'rgb(125, 125, 125, 0.5)',
-              borderRadius: '.25em'
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: '800',
+              backgroundColor: 'rgb(2, 3, 220, .5)',
+              padding: '.75em 1em',
+              borderRadius: '.5em',
             }}>Bot Analytics</h3>
           <button
             style={{
@@ -538,10 +553,13 @@ function MedicareClientSettings(props) {
         }}>
           <h3
             style={{
+              marginBottom: '1.5em',
               fontSize: '1.25em',
-              padding: '.75em',
-              backgroundColor: 'rgb(125, 125, 125, 0.5)',
-              borderRadius: '.25em'
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: '800',
+              backgroundColor: 'rgb(2, 3, 220, .5)',
+              padding: '.75em 1em',
+              borderRadius: '.5em',
             }}>User Feedback</h3>
           <textarea
             value={feedback}
@@ -593,10 +611,13 @@ function MedicareClientSettings(props) {
         }}>
           <h3
             style={{
+              marginBottom: '1.5em',
               fontSize: '1.25em',
-              padding: '.75em',
-              backgroundColor: 'rgb(125, 125, 125, 0.5)',
-              borderRadius: '.25em'
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: '800',
+              backgroundColor: 'rgb(2, 3, 220, .5)',
+              padding: '.75em 1em',
+              borderRadius: '.5em',
             }}>Activity Logs</h3>
           <button
             style={{

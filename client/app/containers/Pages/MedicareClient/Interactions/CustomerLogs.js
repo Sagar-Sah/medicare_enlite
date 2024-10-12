@@ -11,7 +11,10 @@ import {
 const CustomerLogs = ({ customerLogs }) => (
   <Card>
     <CardContent>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" gutterBottom style={{
+        fontFamily: 'Inter, sans-serif',
+        fontSize: '1.125em'
+      }}>
         Customer Logs
       </Typography>
       <List>
