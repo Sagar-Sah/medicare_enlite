@@ -90,18 +90,18 @@ function SupportManagement(props) {
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
       </Helmet>
-      <div className="container">
+      <div className="containeradmin support">
         <section id="support-section">
           <h2 style={{
             fontSize: '24px',
             fontWeight: 'bold',
             padding: '.75em 1em',
-            backgroundColor: 'rgb(1, 1, 200, 0.25)',
+            backgroundColor: 'rgb(1, 130, 220, 0.3)',
             borderRadius: '.25em',
             margin: '.5em .25em',
           }}>Support Bot</h2>
           <div id="chat-box">
-            <div
+            <div className='bot-messages'
               id="bot-messages"
               ref={chatboxRef} // Add the reference here
               style={{
@@ -113,7 +113,7 @@ function SupportManagement(props) {
                 marginBottom: '10px',
                 borderRadius: '.25em',
                 margin: '.5em',
-                backgroundColor: 'rgb(1, 1, 200, 0.08)',
+                backgroundColor: 'rgb(1, 250, 250, 0.02)',
               }}
             >
               {botMessages.map((msg, index) => (
@@ -132,7 +132,8 @@ function SupportManagement(props) {
                 padding: '.75em 1em',
                 margin: '.5em',
                 borderRadius: '.25em',
-                backgroundColor: 'rgb(1, 1, 200, 0.05)',
+                backgroundColor: 'rgb(1, 130, 220, 0.03)',
+                border: '1px solid rgb(150, 150, 150, .6)',
                 color: 'inherit'
               }}
             />
@@ -150,7 +151,7 @@ function SupportManagement(props) {
             fontSize: '24px',
             fontWeight: 'bold',
             padding: '.75em 1em',
-            backgroundColor: 'rgb(1, 1, 200, 0.25)',
+            backgroundColor: 'rgb(1, 130, 220, 0.3)',
             borderRadius: '.25em',
             margin: '1.5em .25em',
           }}
@@ -176,6 +177,8 @@ function SupportManagement(props) {
                 padding: '1em',
                 font: 'inherit',
                 margin: '.5em',
+                backgroundColor: 'rgb(1, 130, 220, 0.03)',
+                border: '1px solid rgb(150, 150, 150, .6)',
               }}
             ></textarea>
 
@@ -195,12 +198,18 @@ function SupportManagement(props) {
                 padding: '1em',
                 font: 'inherit',
                 margin: '.5em',
+                backgroundColor: 'rgb(1, 130, 220, 0.03)',
+                color: 'inherit',
+                border: '1px solid rgb(150, 150, 150, .6)',
               }}
             />
 
             <button type="submit" style={{
-              padding: '.75em',
+              padding: '.75em 1.5em',
+              fontSize: '.9em',
               margin: '1em .5em',
+              width: 'fit-content',
+              borderRadius: '.25em'
             }}>Submit Ticket</button>
           </form>
         </section>

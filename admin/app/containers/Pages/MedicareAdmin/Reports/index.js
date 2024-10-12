@@ -62,8 +62,8 @@ const ReportsManagement = (props) => {
           style={{
             fontSize: '24px',
             fontWeight: 'bold',
-            padding: '.65em 1em',
-            backgroundColor: 'rgb(1, 1, 200, 0.25)',
+            padding: '.75em 1em',
+            backgroundColor: 'rgb(1, 130, 220, 0.3)',
             borderRadius: '.25em',
             margin: '.5em .25em',
           }}
@@ -102,7 +102,7 @@ const ReportsManagement = (props) => {
               padding: '.1em .75em',
               borderRadius: '.25em',
               border: '1px solid rgb(125, 125, 125, .5)',
-              backgroundColor: 'rgb(1, 1, 200, 0.25)',
+              backgroundColor: 'rgb(1, 1, 200, 0.1)',
               color: 'inherit',
             }}
           />
@@ -125,7 +125,7 @@ const ReportsManagement = (props) => {
               padding: '.1em .75em',
               borderRadius: '.25em',
               border: '1px solid rgb(125, 125, 125, .5)',
-              backgroundColor: 'rgb(1, 1, 200, 0.25)',
+              backgroundColor: 'rgb(1, 1, 200, 0.1)',
               color: 'inherit',
             }}
           />
@@ -137,7 +137,7 @@ const ReportsManagement = (props) => {
               fontSize: '18px',
               fontWeight: 'bold',
               padding: '.65em 1em',
-              backgroundColor: 'rgb(1, 1, 200, 0.25)',
+              backgroundColor: 'rgb(1, 150, 220, 0.1)',
               borderRadius: '.25em',
               margin: '2em .75em',
             }}
@@ -217,7 +217,7 @@ const ReportsManagement = (props) => {
               fontSize: '18px',
               fontWeight: 'bold',
               padding: '.65em 1em',
-              backgroundColor: 'rgb(1, 1, 200, 0.25)',
+              backgroundColor: 'rgb(1, 150, 220, 0.1)',
               borderRadius: '.25em',
               margin: '2em .75em',
             }}
@@ -302,7 +302,7 @@ const ReportsManagement = (props) => {
               fontSize: '18px',
               fontWeight: 'bold',
               padding: '.65em 1em',
-              backgroundColor: 'rgb(1, 1, 200, 0.25)',
+              backgroundColor: 'rgb(1, 150, 220, 0.1)',
               borderRadius: '.25em',
               margin: '2em .75em',
             }}
@@ -330,7 +330,7 @@ const ReportsManagement = (props) => {
                 flexGrow: 1,
                 alignContent: 'center',
                 textAlign: 'center',
-                backgroundColor: 'rgb(1, 1, 200, 0.25)',
+                boxShadow: '2px 2px 300px 5px rgb(1, 150, 220, .25) inset',
                 borderRadius: '.5em',
               }}
             >
@@ -394,7 +394,7 @@ const ReportsManagement = (props) => {
                 flexGrow: 1,
                 alignContent: 'center',
                 textAlign: 'center',
-                backgroundColor: 'rgb(1, 1, 200, 0.25)',
+                boxShadow: '2px 2px 300px 5px rgb(1, 150, 220, .25) inset',
                 borderRadius: '.5em',
               }}
             >

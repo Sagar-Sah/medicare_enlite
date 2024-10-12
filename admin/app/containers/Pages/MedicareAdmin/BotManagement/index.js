@@ -47,10 +47,20 @@ const ClientManagement = () => {
         <meta name="description" content={description} />
       </Helmet>
       <div className="client_management" style={{ fontFamily: 'Inter, sans-serif' }}>
-        <section className="bot-overview">
-          <Toolbar className={classes.toolbar}>
+        <section className="bot-overview" style={{
+          padding: '1em'
+        }}>
+          <Toolbar className={classes.toolbar} style={{
+            backgroundColor: 'rgb(1, 130, 220, 0.3)',
+            borderRadius: '.25em',
+            margin: '.5em 0',
+          }}>
             <div className={classes.title}>
-              <Typography className={classes.title} style={{ fontSize: 20, fontFamily: 'Inter, sans-serif' }} variant="h6">
+              <Typography className={classes.title} variant="h6" style={{
+                fontSize: '1.5em',
+                fontWeight: 'bold',
+                padding: '.65em 0',
+              }}>
                 Bot Management
               </Typography>
             </div>
@@ -84,9 +94,9 @@ const ClientManagement = () => {
                         onClick={() => toggleBotStatus(index)}
                         style={{
                           width: '100px',
-                          backgroundColor: 'rgb(255,140,0, 0.4)',
+                          backgroundColor: 'rgb(1,120,220, 0.7)',
                           padding: '.5em 1em',
-                          color: 'inherit !important',
+                          color: 'inherit',
                         }}
                       >
                         {bot.status === 'Running' ? 'Stop' : 'Run'}
@@ -96,7 +106,7 @@ const ClientManagement = () => {
                         onClick={() => deleteBot(index)}
                         style={{
                           width: '100px',
-                          backgroundColor: 'rgb(255,0,0, 0.7)',
+                          backgroundColor: 'rgb(255,0,0, 0.8)',
                           color: 'inherit !important',
                           padding: '.5em 1em'
                         }}>
@@ -106,7 +116,7 @@ const ClientManagement = () => {
                         className="action-btn edit-btn" onClick={() => editBot(index)}
                         style={{
                           width: '100px',
-                          backgroundColor: 'rgb(138,43,226, 0.5)',
+                          backgroundColor: 'rgb(1,120,226, 0.8)',
                           color: 'inherit !important',
                           padding: '.5em 1em'
                         }}>
@@ -126,25 +136,25 @@ const ClientManagement = () => {
             onClick={() => window.location.reload()}
             style={{
               width: '220px',
-              margin: '1em 0'
+              margin: '1em 0',
             }}
           >
             Refresh Bots
           </button>
         </section>
 
-        <section className="training-materials">
+        <section className="training-materials" style={{
+          padding: '1em'
+        }}>
           <Typography
             className={classes.title}
             style={{
-              fontSize: 20,
-              fontFamily: 'Inter, sans-serif',
-              backgroundColor: 'rgb(135,206,250, 1)',
-              opacity: '.6',
-              color: '#000080',
+              fontSize: '1.25em',
+              fontWeight: 'bold',
               padding: '.75em 1em',
-              margin: '1.25em 0',
-              borderRadius: '6px'
+              backgroundColor: 'rgb(1, 130, 220, 0.3)',
+              borderRadius: '.25em',
+              margin: '.75em 0',
             }}
             variant="h6"
           >

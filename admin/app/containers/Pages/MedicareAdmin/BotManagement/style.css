@@ -13,6 +13,12 @@ button.action-btn:hover {
   height: 200px;
   padding: 1em;
   border-radius: .5em;
+  background-color: inherit;
+  border: 1px solid rgb(150, 150, 150, 0.3);
+  color: inherit;
+}
+.training_material_area:focus{
+  border: 1px solid rgb(3, 200, 100, 0.3);
 }
 
 .save_training{
@@ -26,7 +32,9 @@ button.action-btn:hover {
   color: whitesmoke;
 }
 
-
+.refresh_bots{
+  background-color: rgb(3, 100, 200, 0.8);
+}
 
 .refresh_bots:hover{
   background-color: yellowgreen;

@@ -25,21 +25,32 @@ function AdminDashboard(props) {
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
       </Helmet>
-      <div
-        style={{
-          display: 'flex',
-          height: '100%',
-          flexWrap: 'wrap',
-          gap: '2.5em 1em',
-          boxSizing: 'border-box',
-        }}
-      >
-        <ActiveUser/>
-        <BotDeployed/>
-        <RecentActivities/>
-        <Charts/>
-        <Graph/>
-        <Table/>
+      <div>
+        <h2 style={{
+          fontSize: '24px',
+          fontWeight: 'bold',
+          padding: '.75em 1em',
+          backgroundColor: 'rgb(1, 130, 220, 0.3)',
+          borderRadius: '.25em',
+          margin: '.5em .25em',
+        }}>Dashboard Overview</h2>
+        <div
+          style={{
+            display: 'flex',
+            height: '100%',
+            flexWrap: 'wrap',
+            gap: '2.5em 1em',
+            boxSizing: 'border-box',
+            padding: '1em'
+          }}
+        >
+          <ActiveUser/>
+          <BotDeployed/>
+          <RecentActivities/>
+          <Charts/>
+          <Graph/>
+          <Table/>
+        </div>
       </div>
     </div>
   );
