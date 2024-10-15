@@ -1,8 +1,1 @@
-national clone
-nepal
-world
-
-adfasdfa
-sd
-a
-e
+we mention the all the keys and personal aspects
