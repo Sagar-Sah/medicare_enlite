@@ -1,1 +1,1 @@
-telgram 
+whatsapp
