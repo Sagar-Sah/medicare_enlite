@@ -47,27 +47,22 @@ const ClientManagement = () => {
         <meta name="description" content={description} />
       </Helmet>
       <div className="client_management" style={{ fontFamily: 'Inter, sans-serif' }}>
+        <div>
+          <h2 style={{
+            fontSize: '24px',
+            fontWeight: 'bold',
+            padding: '.75em 1em',
+            backgroundColor: '#0f3c4c',
+            color: '#fff',
+            margin: '0 .6em',
+          }}>Bot Management</h2>
+        </div>
         <section className="bot-overview" style={{
           padding: '1em'
         }}>
-          <Toolbar className={classes.toolbar} style={{
-            backgroundColor: 'rgb(1, 130, 220, 0.3)',
-            borderRadius: '.25em',
-            margin: '.5em 0',
-          }}>
-            <div className={classes.title}>
-              <Typography className={classes.title} variant="h6" style={{
-                fontSize: '1.5em',
-                fontWeight: 'bold',
-                padding: '.65em 0',
-              }}>
-                Bot Management
-              </Typography>
-            </div>
-          </Toolbar>
           {bots.length > 0 ? (
             <table id="bot-table" textAlign="center">
-              <thead style={{ backgroundColor: 'rgba(125, 125, 125, 0.5)' }}>
+              <thead style={{ backgroundColor: 'rgb(37, 130, 160, .5)' }}>
                 <tr>
                   <th style={{ width: '20%', padding: '1em 0.25em' }}>Bot ID</th>
                   <th style={{ width: '20%', padding: '1em 0.25em' }}>Status</th>
@@ -75,7 +70,7 @@ const ClientManagement = () => {
                   <th style={{ width: '40%', padding: '1em 0.25em' }}>Actions</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody style={{ backgroundColor: 'rgb(37, 130, 160, .15)' }}>
                 {bots.map((bot, index) => (
                   <tr key={bot.id}>
                     <td style={{ padding: '.5em 0.25em', alignContent: 'center' }}>{bot.id}</td>
@@ -94,8 +89,10 @@ const ClientManagement = () => {
                         onClick={() => toggleBotStatus(index)}
                         style={{
                           width: '100px',
-                          backgroundColor: 'rgb(1,120,220, 0.7)',
-                          padding: '.5em 1em',
+                          backgroundColor: '#66b6d2',
+                          fontSize: '.9em',
+                          padding: '.65em',
+                          margin: '.5em 0',
                           color: 'inherit',
                         }}
                       >
@@ -106,9 +103,11 @@ const ClientManagement = () => {
                         onClick={() => deleteBot(index)}
                         style={{
                           width: '100px',
-                          backgroundColor: 'rgb(255,0,0, 0.8)',
-                          color: 'inherit !important',
-                          padding: '.5em 1em'
+                          backgroundColor: 'rgb(200,5,10, 1)',
+                          color: 'inherit',
+                          padding: '.65em',
+                          margin: '.5em 0',
+                          fontSize: '.79em'
                         }}>
                         Delete
                       </button>
@@ -116,9 +115,11 @@ const ClientManagement = () => {
                         className="action-btn edit-btn" onClick={() => editBot(index)}
                         style={{
                           width: '100px',
-                          backgroundColor: 'rgb(1,120,226, 0.8)',
-                          color: 'inherit !important',
-                          padding: '.5em 1em'
+                          backgroundColor: '#66b6d2',
+                          color: 'inherit',
+                          fontSize: '.9em',
+                          padding: '.65em',
+                          margin: '.5em 0',
                         }}>
                         Edit
                       </button>
@@ -137,6 +138,8 @@ const ClientManagement = () => {
             style={{
               width: '220px',
               margin: '1em 0',
+              backgroundColor: '#3ba1c5',
+              color: 'white'
             }}
           >
             Refresh Bots

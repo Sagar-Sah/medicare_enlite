@@ -30,9 +30,9 @@ function AdminDashboard(props) {
           fontSize: '24px',
           fontWeight: 'bold',
           padding: '.75em 1em',
-          backgroundColor: 'rgb(1, 130, 220, 0.3)',
-          borderRadius: '.25em',
-          margin: '.5em .25em',
+          backgroundColor: '#0f3c4c',
+          color: '#fff',
+          margin: '0 .6em',
         }}>Dashboard Overview</h2>
         <div
           style={{

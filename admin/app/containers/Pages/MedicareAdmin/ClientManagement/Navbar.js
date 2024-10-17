@@ -15,7 +15,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
       flexWrap: 'wrap',
       width: '100%',
       textAlign: 'center',
-      borderRadius: '.5em',
+      borderRadius: '.25em',
       overflow: 'hidden',
       marginBottom: '2em',
       gap: '.25em',

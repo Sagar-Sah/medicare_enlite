@@ -35,8 +35,22 @@ function ClientManagement(props) {
         <meta property="twitter:description" content={description} />
       </Helmet>
       <div>
-        <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
-        {renderContent()}
+        <div>
+          <h2 style={{
+            fontSize: '24px',
+            fontWeight: 'bold',
+            padding: '.75em 1em',
+            backgroundColor: '#0f3c4c',
+            color: '#fff',
+            margin: '0 .6em',
+          }}>Client Management</h2>
+        </div>
+        <div style={{
+          padding: '1em'
+        }}>
+          <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+          {renderContent()}
+        </div>
       </div>
     </div>
   );

@@ -4,8 +4,8 @@
   font-family: "Inter", sans-serif;
 }
 
-button.action-btn:hover {
-  background-color: grey !important;
+button.action-btn:hover, .refresh_bots:hover {
+  background-color: #0f3c4c !important;
 }
 
 .training_material_area{

@@ -15,7 +15,7 @@ const Botassign = () => (
     flexWrap: 'wrap',
     width: '100%',
     gap: '2em .5em',
-    padding: '.5em'
+    // padding: '.5em'
   }}>
     <div className="left-section" style={{
       height: '600px',
@@ -27,22 +27,23 @@ const Botassign = () => (
         padding: '0', // this is for removing default top padding
       }}>
         <ListItem
-          sx={{
-            bgcolor: 'rgb(125, 125, 125, 0.25)',
+          style={{
+            backgroundColor: 'rgb(37, 130, 160, .5)',
             marginBottom: '.5em',
-            padding: 'auto .25em',
             textTransform: 'uppercase',
-            textAlign: 'center',
             display: 'flex',
+            flexWrap: 'wrap',
             alignItems: 'center',
             justifyContent: 'center',
-            fontFamily: 'Rubik, sans-serif'
           }}
         >
           <ListItemText><h2 style={{
-            fontFamily: 'Rubik, sans-serif',
-            fontWeight: '600',
-            margin: '0'
+            fontFamily: 'Inter, sans-serif',
+            fontSize: '1.15em',
+            textTransform: 'capitalize',
+            fontWeight: '700',
+            margin: '0',
+            padding: '.2em 1em'
           }}>Assign Bot To Client</h2></ListItemText>
         </ListItem>
 
@@ -54,7 +55,7 @@ const Botassign = () => (
               marginBottom: '.5em',
               padding: '.25em 1em',
               overflow: 'hidden',
-              bgcolor: 'rgb(125, 125, 125, 0.25)',
+              backgroundColor: 'rgb(37, 130, 160, .15)',
             }}
           >
             <ListItemAvatar>
@@ -80,10 +81,10 @@ const Botassign = () => (
               variant="contained"
               size="small"
               sx={{
-                padding: '.25em 1em',
+                padding: '.5em 1.5em',
                 borderRadius: '.25em',
                 textTransform: 'capitalize',
-                backgroundColor: 'green'
+                backgroundColor: '#2596be'
               }}
             >
               Assign
@@ -104,21 +105,24 @@ const Botassign = () => (
         }}
       >
         <ListItem
-          sx={{
-            bgcolor: 'rgb(125, 125, 125, 0.25)',
+          style={{
+            backgroundColor: 'rgb(37, 130, 160, .5)',
             marginBottom: '.5em',
-            padding: 'auto .25em',
-            fontWeight: 'bold',
             textTransform: 'uppercase',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
           <ListItemText><h2 style={{
-            fontFamily: 'Rubik, sans-serif',
-            fontWeight: '600',
+            fontFamily: 'Inter, sans-serif',
+            fontSize: '1.15em',
+            textTransform: 'capitalize',
+            fontWeight: '700',
             margin: '0',
-            textAlign: 'center',
-          }}
-          >Details of Client Activity</h2></ListItemText>
+            padding: '.2em 1em'
+          }}>Details of Client Activity</h2></ListItemText>
         </ListItem>
 
         {[...Array(10)].map((_, index) => (
@@ -129,7 +133,7 @@ const Botassign = () => (
               marginBottom: '.5em',
               padding: '.25em 1em',
               overflow: 'hidden',
-              bgcolor: 'rgb(125, 125, 125, 0.25)',
+              backgroundColor: 'rgb(37, 130, 160, .15)',
             }}
           >
             <ListItemAvatar>
@@ -156,10 +160,10 @@ const Botassign = () => (
               variant="contained"
               size="small"
               sx={{
-                padding: '.25em 1em',
+                padding: '.5em 1.5em',
                 borderRadius: '.25em',
                 textTransform: 'capitalize',
-                backgroundColor: 'green'
+                backgroundColor: '#2596be'
               }}
             >
               Details

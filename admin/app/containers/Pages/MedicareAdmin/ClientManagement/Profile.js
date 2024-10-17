@@ -407,8 +407,8 @@ const Profile = () => {
         className='add-client-btn'
         style={{
           position: 'fixed',
-          top: '15em',
-          right: '1em',
+          top: '20em',
+          right: '3em',
           border: '1px solid rgb(125, 125, 125, 0.5)',
           borderRadius: '.25em',
         }}

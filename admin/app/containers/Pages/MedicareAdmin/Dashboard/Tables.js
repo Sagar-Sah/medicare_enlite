@@ -9,7 +9,7 @@ function BasicTable(props) {
     <div style={{
       width: '100%',
       flexGrow: '1',
-      padding: '1em',
+      paddingTop: '1em',
     }}>
       <div>
         <StrippedTable />

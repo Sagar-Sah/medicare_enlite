@@ -39,13 +39,13 @@ const AccountManagement = () => {
       key={user.id}
       className="userAccount"
       style={{
-        border: '1px solid rgb(125, 125, 125, 0.5)',
-        padding: '1em',
-        borderRadius: '8px',
-        backgroundColor: 'rgb(125, 125, 125, 0.05)',
+        border: '1px solid rgb(125, 125, 125, 0.4)',
+        padding: '1.5em',
+        borderRadius: '.5em',
+        backgroundColor: 'rgb(37, 130, 160, .15)',
         width: '400px',
         flexGrow: 1,
-        opacity: user.frozen ? 0.6 : 1, // Change opacity if account is frozen
+        opacity: user.frozen ? 0.5 : 1, // Change opacity if account is frozen
       }}
     >
       <p style={{ fontWeight: '600', fontSize: '1.25em' }}>
@@ -63,13 +63,13 @@ const AccountManagement = () => {
       <button
         onClick={() => handleSelectUser(user.id)}
         style={{
-          backgroundColor: '#007bff',
+          backgroundColor: '#1e7898',
           color: 'white',
           border: 'none',
           padding: '8px 16px',
           borderRadius: '4px',
           cursor: 'pointer',
-          marginRight: '10px',
+          margin: ' 1em .5em 0 0',
         }}
       >
         View Details
@@ -83,6 +83,7 @@ const AccountManagement = () => {
           padding: '8px 16px',
           borderRadius: '4px',
           cursor: 'pointer',
+          marginTop: ' 1em',
         }}
       >
         {user.frozen ? 'Unfreeze Account' : 'Freeze Account'}
@@ -91,12 +92,11 @@ const AccountManagement = () => {
   ));
 
   return (
-    <div style={{ padding: '1em', position: 'relative' }}>
+    <div style={{ position: 'relative' }}>
       <h1
         style={{
-          backgroundColor: 'rgb(125, 125, 125, 0.2)',
-          padding: '.65em 1em',
-          borderRadius: '.25em',
+          backgroundColor: 'rgb(37, 130, 160, .5)',
+          padding: '.9em 2em',
         }}
       >
         Client Management Dashboard
@@ -124,7 +124,7 @@ const AccountManagement = () => {
             padding: '1em',
             border: '1px solid #ccc',
             borderRadius: '8px',
-            backgroundColor: '#f1f1f1',
+            backgroundColor: 'rgb(37, 130, 160, .15)',
             minWidth: '30%',
           }}
         >

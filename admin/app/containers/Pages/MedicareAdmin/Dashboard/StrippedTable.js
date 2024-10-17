@@ -33,23 +33,17 @@ function StrippedTable(props) {
   const { classes, cx } = useStyles();
   return (
     <Fragment>
-      <Toolbar className={classes.toolbar}>
-        <div className={classes.title}>
-          <Typography className={classes.title} style={{
-            fontSize: 16,
-            fontFamily: 'Inter, sans-serif',
-          }} variant="h6">Nutrition</Typography>
-        </div>
-      </Toolbar>
       <div className={classes.rootTable}>
         <Table className={cx(classes.table, classes.stripped)}>
-          <TableHead>
+          <TableHead style={{
+            backgroundColor: 'rgb(37, 150, 190, .25)',
+          }}>
             <TableRow>
-              <TableCell style={{ fontFamily: 'Inter, sans-serif' }}>Dessert (100g serving)</TableCell>
-              <TableCell style={{ fontFamily: 'Inter, sans-serif' }} align="center">Calories</TableCell>
-              <TableCell style={{ fontFamily: 'Inter, sans-serif' }} align="center">Fat (g)</TableCell>
-              <TableCell style={{ fontFamily: 'Inter, sans-serif' }} align="center">Carbs (g)</TableCell>
-              <TableCell style={{ fontFamily: 'Inter, sans-serif' }} align="center">Protein (g)</TableCell>
+              <TableCell style={{ fontFamily: 'Inter, sans-serif' }}>Active User</TableCell>
+              <TableCell style={{ fontFamily: 'Inter, sans-serif' }} align="center">Bot Deployed</TableCell>
+              <TableCell style={{ fontFamily: 'Inter, sans-serif' }} align="center">Recent Activities</TableCell>
+              <TableCell style={{ fontFamily: 'Inter, sans-serif' }} align="center">Carbs</TableCell>
+              <TableCell style={{ fontFamily: 'Inter, sans-serif' }} align="center">Protein</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

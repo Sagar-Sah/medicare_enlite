@@ -16,17 +16,17 @@
 } 
 
 ::-webkit-scrollbar-track {
-  background: #f1f1ff; 
-  border-radius: 8px; 
+  background: #d3eaf2; 
+  border-radius: 2px; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888; 
-  border-radius: 8px; 
+  background: #0b2d39; 
+  border-radius: 2px; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #071e26;
 }
 
 /* If you need to customize horizontal scrollbars */

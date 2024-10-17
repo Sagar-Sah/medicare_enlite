@@ -24,7 +24,7 @@ function Login() {
   useEffect(() => {
     if (valueForm) {
       console.log(`You submitted:\n\n${valueForm.email}`);
-      window.location.href = '/app';
+      window.location.href = '/app/dashboard';
     }
   }, [valueForm]);
 

@@ -19,16 +19,19 @@ const ActiveUser = () => (
   >
     <ListItem
       style={{
-        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+        alignItems: 'center',
         marginBottom: '.5em',
-        padding: 'auto .25em',
-        fontFamily: 'Rubik sans-serif',
-        fontWeight: '700',
-        textTransform: 'uppercase',
-
-      }}
-    >
-      <ListItemText style={{ fontFamily: 'Rubik, sans-serif' }}>Active Users</ListItemText>
+        padding: '.25em 1em',
+        overflow: 'hidden',
+        backgroundColor: 'rgb(37, 130, 160, .5)',
+        fontWeight: '800',
+      }}>
+      <div style={{
+        fontWeight: '600',
+        fontFamily: 'Inter, sans-serif',
+        fontSize: '1.125em',
+        padding: '.75em 1em'
+      }}>Active User</div>
     </ListItem>
     <ListItem
       style={{
@@ -36,7 +39,7 @@ const ActiveUser = () => (
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+        backgroundColor: 'rgb(37, 150, 190, .15)',
         fontFamily: 'Rubik, sans-serif',
       }}>
       <ListItemAvatar>
@@ -74,7 +77,7 @@ const ActiveUser = () => (
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+        backgroundColor: 'rgb(37, 150, 190, .15)',
         fontFamily: 'Rubik, sans-serif',
       }}>
       <ListItemAvatar>
@@ -111,7 +114,7 @@ const ActiveUser = () => (
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+        backgroundColor: 'rgb(37, 150, 190, .15)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
@@ -147,7 +150,7 @@ const ActiveUser = () => (
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+        backgroundColor: 'rgb(37, 150, 190, .15)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
@@ -185,7 +188,7 @@ const ActiveUser = () => (
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+        backgroundColor: 'rgb(37, 150, 190, .15)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />

@@ -23,9 +23,15 @@ const RecentActivities = () => (
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+        backgroundColor: 'rgb(37, 130, 160, .5)',
+        fontWeight: '800',
       }}>
-      <ListItemText>Recent Activities</ListItemText>
+      <div style={{
+        fontWeight: '600',
+        fontFamily: 'Inter, sans-serif',
+        fontSize: '1.125em',
+        padding: '.75em 1em'
+      }}>Recent Activities</div>
     </ListItem>
     <ListItem
       style={{
@@ -33,7 +39,7 @@ const RecentActivities = () => (
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+        backgroundColor: 'rgb(37, 150, 190, .15)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
@@ -63,7 +69,7 @@ const RecentActivities = () => (
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+        backgroundColor: 'rgb(37, 150, 190, .15)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
@@ -96,7 +102,7 @@ const RecentActivities = () => (
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+        backgroundColor: 'rgb(37, 150, 190, .15)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
@@ -126,7 +132,7 @@ const RecentActivities = () => (
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+        backgroundColor: 'rgb(37, 150, 190, .15)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
@@ -156,7 +162,7 @@ const RecentActivities = () => (
         marginBottom: '.5em',
         padding: '.25em 1em',
         overflow: 'hidden',
-        backgroundColor: 'rgb(1, 1, 200, 0.125)',
+        backgroundColor: 'rgb(37, 150, 190, .15)',
       }}>
       <ListItemAvatar>
         <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />

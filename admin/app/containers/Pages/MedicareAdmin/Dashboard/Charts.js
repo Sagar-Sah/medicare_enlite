@@ -7,7 +7,7 @@ const Charts = () => (
     height: '328px',
     width: '400px',
     flexGrow: '1',
-    boxShadow: '2px 2px 100px 50px rgb(1, 1, 200, 0.25) inset',
+    boxShadow: '2px 2px 100px 50px rgb(37, 150, 190, .2) inset',
     padding: '1em',
     bgcolor: 'rbg(232, 232, 232, 0.2)',
   }}>
