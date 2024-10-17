@@ -84,7 +84,7 @@ const Botassign = () => (
                 padding: '.5em 1.5em',
                 borderRadius: '.25em',
                 textTransform: 'capitalize',
-                backgroundColor: '#2596be'
+                backgroundColor: '#165a72'
               }}
             >
               Assign
@@ -163,7 +163,7 @@ const Botassign = () => (
                 padding: '.5em 1.5em',
                 borderRadius: '.25em',
                 textTransform: 'capitalize',
-                backgroundColor: '#2596be'
+                backgroundColor: '#165a72'
               }}
             >
               Details

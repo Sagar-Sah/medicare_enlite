@@ -3,51 +3,43 @@
 *{
   font-family: "Inter" sans-serif;
 }
-
-sfsdf{
-
-border: 1px solid red;
-
-}
-
-.main-content {
+.container_billing .main-content {
   padding: 1em;
   width: 100%;
 }
 
-.dashboard-section {
-
+.container_billing .dashboard-section {
   margin-bottom: 2.5em;
   border-radius: .5em; 
   padding: 1em;
   box-shadow: 2px 0 50px 1px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.container_billing h2 {
   margin-bottom: 1em;
 }
 
 /* Subscription Plans Table */
-.plan-table {
+.container_billing  .plan-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1.5em;
 }
 
-.plan-table th,
-.plan-table td {
+.container_billing .plan-table th,
+.container_billing .plan-table td {
   padding: 1em .125em;
   border: 1px solid rgba(175, 175, 175, 0.7);
   align-content: center;
   text-align: center;
 }
 
-.plan-table th {
+.container_billing .plan-table th {
   background-color: #005a1e;
   color: #fff;
 }
 
-.tableBtn{
+.container_billing .tableBtn{
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
@@ -60,12 +52,12 @@ h2 {
 
 
 /* KPI Section */
-.kpi-metrics {
+.container_billing .kpi-metrics {
   display: flex;
   justify-content: space-around;
 }
 
-.kpi-item {
+.container_billing .kpi-item {
   text-align: center;
   height: 180px;
   align-content: center;
@@ -77,18 +69,18 @@ h2 {
   box-shadow: 2px 0 20px 2px rgba(0, 0, 0, 0.1); 
 }
 
-.kpi-item h3 {
+.container_billing .kpi-item h3 {
   margin-bottom: 1em;
 }
 
-.kpi-item p {
+.container_billing .kpi-item p {
   font-size: 1.5em;
   font-weight: bold;
   color: #007BFF; 
 }
 
 /* Button Styles */
-button {
+.container_billing  button {
   background-color: #007BFF;
   color: #fffff0;
   border: 1px solid rgba(175, 175, 175, 0.4);
@@ -98,12 +90,12 @@ button {
   font-family: "Inter" sans-serif;
 }
 
-button:hover {
+.container_billing button:hover {
   background-color: #0056b3;
 }
 
 /* Textarea */
-textarea {
+.container_billing textarea {
   width: 100%;
   height: 150px;
   padding: 1em;
@@ -114,7 +106,7 @@ textarea {
 }
 
 /* Modal Styles */
-.modal {
+.container_billing .modal {
   position: fixed; 
   z-index: 2000;
   left: 0;
@@ -128,7 +120,7 @@ textarea {
   justify-content: center;
 }
 
-.modal-content {
+.container_billing .modal-content {
   background-color: rgba(224, 224, 224, 0.8);
   padding: 2em 1.5em;
   border: 1px solid #888;
@@ -138,7 +130,7 @@ textarea {
   position: relative;
 }
 
-.modal-content :where(input, select, option){
+.container_billing .modal-content :where(input, select, option){
   all: unset;
   border: 1px solid rgba(100, 100, 100, .6);
   padding: 1em 2em;
@@ -152,25 +144,26 @@ textarea {
   color: black;
   cursor: text;
 }
-.modal-content :where(input, select, option):focus{
+
+.container_billing .modal-content :where(input, select, option):focus{
   border: 1px solid green;
 }
 
-.modal-content select{
+.container_billing .modal-content select{
   cursor: pointer;
 }
 
-.modal-content select option{
+.container_billing .modal-content select option{
   background-color: rgba(124, 124, 124, 0.6);
   padding: .5em;
 }
 
-.modal-content .input_div{
+.container_billing .modal-content .input_div{
   display: flex;
   flex-wrap: wrap;
 }
 
-.close {
+.container_billing .close {
   position: absolute;
   top: 1em;
   right: 1em;
@@ -187,19 +180,19 @@ textarea {
   transition: all .3s ease-in;
 }
 
-.close:hover,
-.close:focus {
+.container_billing .close:hover,
+.container_billing .close:focus {
   color: black;
   background-color: sandybrown;
   text-decoration: none;
   cursor: pointer;
 }
 
-.modal-content .save_plan{
+.container_billing .modal-content .save_plan{
   margin-top: 1.5em;
   margin-left: .5em;
 }
 
-.save_material{
+.container_billing .save_material{
   margin-top: .5em;
 }

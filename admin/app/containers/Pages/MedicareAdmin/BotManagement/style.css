@@ -39,3 +39,23 @@ button.action-btn:hover, .refresh_bots:hover {
 .refresh_bots:hover{
   background-color: yellowgreen;
 }
+
+.training_material_area{
+  background-color: rgb(37, 150, 190, .08);
+  transition: all .3s ease-in;
+}
+
+.training_material_area:focus{
+  background-color: inherit;
+}
+
+.save_training{
+  background-color: #1e7898;
+  color: white;
+  transition: all .3s ease-out;
+}
+
+.save_training:hover{
+  background-color: #134b5f;
+  color: white;
+}

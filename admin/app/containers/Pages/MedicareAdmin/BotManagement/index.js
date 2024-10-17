@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import Autocomplete from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
+import Chip from '@mui/material/Chip';
 import useStyles from 'enl-components/Tables/tableStyle-jss';
 import { Helmet } from 'react-helmet';
 import brand from 'enl-api/dummy/brand';
@@ -13,6 +15,7 @@ const ClientManagement = () => {
 
   const [bots, setBots] = useState([]);
   const [trainingMaterials, setTrainingMaterials] = useState('');
+  const [selectedBots, setSelectedBots] = useState([]);
 
   useEffect(() => {
     setBots(botsData);
@@ -89,11 +92,11 @@ const ClientManagement = () => {
                         onClick={() => toggleBotStatus(index)}
                         style={{
                           width: '100px',
-                          backgroundColor: '#66b6d2',
+                          backgroundColor: '#165a72',
                           fontSize: '.9em',
-                          padding: '.65em',
-                          margin: '.5em 0',
-                          color: 'inherit',
+                          padding: '.75em',
+                          margin: '.3em 0',
+                          color: 'white',
                         }}
                       >
                         {bot.status === 'Running' ? 'Stop' : 'Run'}
@@ -103,11 +106,11 @@ const ClientManagement = () => {
                         onClick={() => deleteBot(index)}
                         style={{
                           width: '100px',
-                          backgroundColor: 'rgb(200,5,10, 1)',
-                          color: 'inherit',
-                          padding: '.65em',
-                          margin: '.5em 0',
-                          fontSize: '.79em'
+                          backgroundColor: 'rgb(210,5,5, .8)',
+                          color: 'white',
+                          padding: '.75em',
+                          margin: '.3em 0',
+                          fontSize: '.9em'
                         }}>
                         Delete
                       </button>
@@ -115,11 +118,11 @@ const ClientManagement = () => {
                         className="action-btn edit-btn" onClick={() => editBot(index)}
                         style={{
                           width: '100px',
-                          backgroundColor: '#66b6d2',
-                          color: 'inherit',
+                          backgroundColor: '#165a72',
+                          color: 'white',
+                          padding: '.75em',
+                          margin: '.3em 0',
                           fontSize: '.9em',
-                          padding: '.65em',
-                          margin: '.5em 0',
                         }}>
                         Edit
                       </button>
@@ -138,7 +141,7 @@ const ClientManagement = () => {
             style={{
               width: '220px',
               margin: '1em 0',
-              backgroundColor: '#3ba1c5',
+              backgroundColor: '#165a72',
               color: 'white'
             }}
           >
@@ -155,22 +158,58 @@ const ClientManagement = () => {
               fontSize: '1.25em',
               fontWeight: 'bold',
               padding: '.75em 1em',
-              backgroundColor: 'rgb(1, 130, 220, 0.3)',
-              borderRadius: '.25em',
+              backgroundColor: 'rgb(26, 105, 133, .5)',
               margin: '.75em 0',
             }}
             variant="h6"
           >
             Manage Training Materials
           </Typography>
+
+          {/* Autocomplete with Chips for Bot Selection */}
+          <Autocomplete
+            multiple
+            id="tags-filled"
+            options={bots.map((bot) => bot.id)}
+            value={selectedBots}
+            onChange={(event, newValue) => setSelectedBots(newValue)}
+            freeSolo
+            renderTags={(value, getTagProps) => value.map((option, index) => (
+              <Chip
+                variant="outlined"
+                label={option}
+                {...getTagProps({ index })}
+              />
+            ))
+            }
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                variant="outlined"
+                label="Select Bots"
+                placeholder="Bots"
+              />
+            )}
+            style={{
+              margin: '1em 0'
+            }}
+          />
+
           <textarea
             className='training_material_area'
             id="training-materials"
             value={trainingMaterials}
             onChange={(e) => setTrainingMaterials(e.target.value)}
             placeholder="Edit training materials here..."
+            style={{
+              width: '100%',
+              borderRadius: '.25em',
+            }}
           />
-          <button className='save_training' id="save-training-btn" onClick={saveTrainingMaterials}>
+          <button
+            className='save_training'
+            id="save-training-btn"
+            onClick={saveTrainingMaterials}>
             Save Training Materials
           </button>
         </section>
