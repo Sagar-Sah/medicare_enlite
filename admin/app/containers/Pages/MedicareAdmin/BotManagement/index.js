@@ -191,7 +191,9 @@ const ClientManagement = () => {
               />
             )}
             style={{
-              margin: '1em 0'
+              // margin: '2em 0'
+              marginTop: '2em',
+              marginBottom: '.5em'
             }}
           />
 

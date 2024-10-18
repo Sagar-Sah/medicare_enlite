@@ -8,12 +8,6 @@
   width: 100%;
 }
 
-/* .container_billing .dashboard-section {
-  margin-bottom: 2.5em;
-  border-radius: .5em; 
-  padding: 1em;
-  box-shadow: 2px 0 50px 1px rgba(0, 0, 0, 0.1);
-} */
 
 .container_billing h2 {
   margin-bottom: 1em;
@@ -60,28 +54,22 @@
 }
 
 
-
-/* KPI Section */
 .container_billing .kpi-metrics {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .container_billing .kpi-item {
   text-align: center;
-  height: 180px;
-  align-content: center;
-  border: 1px solid rgba(175, 175, 175, 0.4);
-  text-align: center;
-  width: 30%;
+  height: 250px;
+  padding: 1em;
+  width: 48%;
   border-radius: .5em; 
-  margin: 2em 0;
-  box-shadow: 2px 0 20px 2px rgba(0, 0, 0, 0.1); 
+  margin: 1em 0;
+  box-shadow: 2px 2px 50px 2px rgba(10, 10, 10, 0.1); 
 }
 
-.container_billing .kpi-item h3 {
-  margin-bottom: 1em;
-}
 
 .container_billing .kpi-item p {
   font-size: 1.5em;
@@ -205,4 +193,12 @@
 
 .container_billing .save_material{
   margin-top: .5em;
+}
+
+rect{
+  width: auto;
+}
+
+path{
+  width: 100%;
 }

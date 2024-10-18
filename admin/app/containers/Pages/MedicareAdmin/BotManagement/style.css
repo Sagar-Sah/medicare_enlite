@@ -59,3 +59,8 @@ button.action-btn:hover, .refresh_bots:hover {
   background-color: #134b5f;
   color: white;
 }
+
+
+.mui-style-ltr-h26gto-MuiAutocomplete-root .MuiAutocomplete-inputRoot{
+  padding: .25em 1em;
+}

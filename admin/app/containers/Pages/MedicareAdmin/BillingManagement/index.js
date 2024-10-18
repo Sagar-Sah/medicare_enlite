@@ -1,10 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import brand from 'enl-api/dummy/brand';
 import { injectIntl } from 'react-intl';
+import { ResponsivePie } from '@nivo/pie'; // Import Nivo Pie
 import Plans from './plans.json';
 import './style.css';
+
+const KPIData = [
+  {
+    id: 'Successful Interactions', label: 'Successful Interactions', value: 85, color: 'hsl(205, 70%, 50%)'
+  },
+  {
+    id: 'Failed Interactions', label: 'Failed Interactions', value: 15, color: 'hsl(340, 70%, 50%)'
+  },
+];
 
 function BillingManagement(props) {
   const title = `${brand.name} - Billing Management`;
@@ -105,15 +115,59 @@ function BillingManagement(props) {
           </section>
 
           <section id="kpi" className="dashboard-section">
-            <h2>Key Performance Indicators (KPIs)</h2>
+            <h2 style={{
+              fontSize: '1em',
+              fontWeight: 'bold',
+              fontFamily: 'Inter, sans-serif',
+              marginTop: '2em'
+            }}>Key Performance Indicators (KPIs)</h2>
             <div className="kpi-metrics">
-              <div className="kpi-item">
-                <h3>Interaction Success Rate</h3>
-                <p id="success-rate">85%</p>
+              <div className="kpi-item" style={{
+                height: '300px',
+                display: 'flex',
+                justifyContent: 'center',
+                flexDirection: 'column'
+              }}>
+                <h3 style={{
+                  fontSize: '1em',
+                  fontFamily: 'Inter',
+                  fontWeight: '600',
+                  margin: '0'
+                }}>Interaction Success Rate</h3>
+                <ResponsivePie
+                  data={KPIData}
+                  margin={{
+                    top: 20, right: 20, bottom: 20, left: 20
+                  }}
+                  innerRadius={0.5}
+                  padAngle={0.7}
+                  cornerRadius={3}
+                  colors={{ scheme: 'nivo' }}
+                  borderWidth={1}
+                  borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
+                  enableArcLinkLabels={false}
+                  enableArcLabels={true}
+                  arcLabelsTextColor="inherif"
+                  arcLabelsRadiusOffset={0.4}
+                  arcLabelsSkipAngle={10}
+                />
               </div>
-              <div className="kpi-item">
-                <h3>Total Payments Processed</h3>
-                <p id="total-payments">$12,300</p>
+              <div className="kpi-item" style={{
+                height: '300px',
+                display: 'flex',
+                justifyContent: 'center',
+                flexDirection: 'column'
+              }}>
+                <h3 style={{
+                  fontSize: '1em',
+                  fontFamily: 'Inter',
+                  fontWeight: '600',
+                  margin: '0'
+                }}>Total Payments Processed</h3>
+                <p id="total-payments" style={{
+                  alignContent: 'center',
+                  alignItems: 'center'
+                }}>$12,300</p>
               </div>
             </div>
           </section>

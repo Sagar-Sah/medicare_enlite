@@ -90,16 +90,19 @@ function SupportManagement(props) {
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
       </Helmet>
-      <div className="containeradmin support">
-        <section id="support-section">
-          <h2 style={{
-            fontSize: '24px',
-            fontWeight: 'bold',
-            padding: '.75em 1em',
-            backgroundColor: 'rgb(1, 130, 220, 0.3)',
-            borderRadius: '.25em',
-            margin: '.5em .25em',
-          }}>Support Bot</h2>
+      <div className="container admin support">
+        <h2 style={{
+          fontSize: '24px',
+          fontWeight: 'bold',
+          padding: '.75em 1em',
+          backgroundColor: '#0f3c4c',
+          color: '#fff',
+          margin: '0 .6em',
+          marginBottom: '1em'
+        }}>Support Bot</h2>
+        <section id="support-section" style={{
+          padding: '0 .5em',
+        }}>
           <div id="chat-box">
             <div className='bot-messages'
               id="bot-messages"
@@ -138,7 +141,7 @@ function SupportManagement(props) {
               }}
             />
             <button id="send-message" onClick={handleSendMessage} style={{
-              width: '130px',
+              width: '120px',
               height: 'auto',
               padding: '.8em',
             }}>Send</button>
@@ -151,15 +154,17 @@ function SupportManagement(props) {
             fontSize: '24px',
             fontWeight: 'bold',
             padding: '.75em 1em',
-            backgroundColor: 'rgb(1, 130, 220, 0.3)',
-            borderRadius: '.25em',
-            margin: '1.5em .25em',
+            backgroundColor: '#0f3c4c',
+            color: '#fff',
+            margin: '0 .7em',
+            marginTop: '1.5em'
           }}
           >Escalate Unresolved Issues</h2>
           <form id="ticket-form" onSubmit={handleTicketSubmission}
             style={{
               display: 'flex',
               flexDirection: 'column',
+              padding: '.5em'
             }}
           >
             <label htmlFor="issue-description" style={{
@@ -174,6 +179,7 @@ function SupportManagement(props) {
               onChange={(e) => setIssueDescription(e.target.value)}
               style={{
                 borderRadius: '.25em',
+                height: '200px',
                 padding: '1em',
                 font: 'inherit',
                 margin: '.5em',
