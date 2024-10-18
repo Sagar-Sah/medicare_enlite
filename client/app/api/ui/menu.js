@@ -1,54 +1,25 @@
 module.exports = [
   {
     key: 'account_page',
-    name: 'Auth Page',
+    name: 'Edit Profile',
     icon: 'account_box',
     child: [
       {
         key: 'account_page',
-        name: 'Sttaic Auth Page',
+        name: 'Edit Profile',
         title: true,
       },
       {
         key: 'login',
-        name: 'Login',
+        name: 'Log out',
         icon: 'account_box',
-        link: '/login'
-      },
-      {
-        key: 'register',
-        name: 'Register',
-        icon: 'border_color',
-        link: '/register'
+        link: '/logout'
       },
       {
         key: 'reset',
         name: 'Reset Password',
         icon: 'undo',
         link: '/reset-password'
-      },
-      {
-        key: 'account_page_firebase',
-        name: 'Firebase Auth Page',
-        title: true,
-      },
-      {
-        key: 'login',
-        name: 'Login',
-        icon: 'account_box',
-        link: '/login-firebase'
-      },
-      {
-        key: 'register',
-        name: 'Register',
-        icon: 'border_color',
-        link: '/register-firebase'
-      },
-      {
-        key: 'reset',
-        name: 'Reset Password',
-        icon: 'undo',
-        link: '/reset-password-firebase'
       },
     ]
   },
@@ -66,145 +37,38 @@ module.exports = [
         key: 'client_dashboard',
         name: 'Dashboard',
         icon: 'admin_panel_settings',
-        link: '/app/medicareClient/dashboard'
+        link: '/app/dashboard'
       },
       {
         key: 'bot_management',
         name: 'Bot',
         icon: 'admin_panel_settings',
-        link: '/app/medicareClient/bot',
+        link: '/app/bot',
       },
       {
         key: 'settings_management',
         name: 'Settings',
         icon: 'admin_panel_settings',
-        link: '/app/medicareClient/settings',
+        link: '/app/settings',
       },
       {
         key: 'interactions_management',
         name: 'Interactions',
         icon: 'admin_panel_settings',
-        link: '/app/medicareClient/interactions',
+        link: '/app/interactions',
       },
       {
         key: 'billing_management',
         name: 'Billing',
         icon: 'admin_panel_settings',
-        link: '/app/medicareClient/billing',
+        link: '/app/billing',
       },
       {
         key: 'reports_management',
         name: 'Reports',
         icon: 'admin_panel_settings',
-        link: '/app/medicareClient/reports',
+        link: '/app/reports',
       }
     ]
   },
-  {
-    key: 'pages',
-    name: 'Pages',
-    icon: 'important_devices',
-    child: [
-      {
-        key: 'other_page',
-        name: 'Welcome Page',
-        title: true,
-      },
-      {
-        key: 'blank',
-        name: 'Blank Page',
-        icon: 'video_label',
-        link: '/app'
-      },
-      {
-        key: 'generic_page',
-        name: 'Generic',
-        title: true,
-      },
-      {
-        key: 'dashboard',
-        name: 'Dashboard',
-        icon: 'settings_brightness',
-        link: '/app/pages/dashboard'
-      },
-      {
-        key: 'forms',
-        name: 'Form',
-        link: '/app/pages/form',
-        icon: 'ballot',
-      },
-      {
-        key: 'tables',
-        name: 'Table',
-        icon: 'grid_on',
-        link: '/app/pages/table'
-      },
-      {
-        key: 'maintenance',
-        name: 'Maintenance',
-        icon: 'settings',
-        link: '/maintenance'
-      },
-      {
-        key: 'coming_soon',
-        name: 'Coming Soon',
-        icon: 'polymer',
-        link: '/coming-soon'
-      },
-    ]
-  },
-  {
-    key: 'errors',
-    name: 'Erros',
-    icon: 'pets',
-    child: [
-      {
-        key: 'errors',
-        name: 'Errors',
-        title: true,
-      },
-      {
-        key: 'not_found_page',
-        name: 'Not Found Page',
-        icon: 'pets',
-        link: '/app/pages/not-found'
-      },
-      {
-        key: 'error_page',
-        name: 'Error Page',
-        icon: 'flash_on',
-        link: '/app/pages/error'
-      },
-    ]
-  },
-  {
-    key: 'menu_levels',
-    name: 'Menu Levels',
-    multilevel: true,
-    icon: 'sort',
-    child: [
-      {
-        key: 'level_1',
-        name: 'Level 1',
-        link: '/#'
-      },
-      {
-        key: 'level_2',
-        keyParent: 'menu_levels',
-        name: 'Level 2',
-        child: [
-          {
-            key: 'sub_menu_1',
-            name: 'Sub Menu 1',
-            link: '/#'
-          },
-          {
-            key: 'sub_menu_2',
-            name: 'Sub Menu 2',
-            link: '/#'
-          },
-        ]
-      },
-    ]
-  }
 ];

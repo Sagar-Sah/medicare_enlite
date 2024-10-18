@@ -210,7 +210,7 @@ function Header(props) {
                 variant="contained"
               >
                 <AccountCircle />
-                <FormattedMessage {...messages.login} />
+                <FormattedMessage {...messages.logout} />
               </Button>
             )
           }

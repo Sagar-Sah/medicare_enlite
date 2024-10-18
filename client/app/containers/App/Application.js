@@ -27,19 +27,19 @@ function Application(props) {
     <Dashboard history={history} changeMode={changeMode}>
       <Switch>
         { /* Home */ }
-        <Route exact path="/app" component={BlankPage} />
+        <Route exact path="/app" component={MedicareClientDashboard} />
         <Route path="/app/pages/dashboard" component={DashboardPage} />
         <Route path="/app/pages/form" component={Form} />
         <Route path="/app/pages/table" component={Table} />
         <Route path="/app/pages/page-list" component={Parent} />
         <Route path="/app/pages/pages/not-found" component={NotFound} />
         <Route path="/app/pages/pages/error" component={Error} />
-        <Route path="/app/medicareClient/dashboard" component={MedicareClientDashboard} />
-        <Route path="/app/medicareClient/billing" component={MedicareClientBilling} />
-        <Route path="/app/medicareClient/bot" component={MedicareClientBot} />
-        <Route path="/app/medicareClient/interactions" component={MedicareClientInteractions} />
-        <Route path="/app/medicareClient/reports" component={MedicareClientReports} />
-        <Route path="/app/medicareClient/settings" component={MedicareClientSettings} />
+        <Route path="/app/dashboard" component={MedicareClientDashboard} />
+        <Route path="/app/billing" component={MedicareClientBilling} />
+        <Route path="/app/bot" component={MedicareClientBot} />
+        <Route path="/app/interactions" component={MedicareClientInteractions} />
+        <Route path="/app/reports" component={MedicareClientReports} />
+        <Route path="/app/settings" component={MedicareClientSettings} />
         <Route component={NotFound} />
       </Switch>
     </Dashboard>
