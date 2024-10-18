@@ -95,19 +95,13 @@ function BillingManagement(props) {
                       <td>{plan.status}</td>
                       <td className='tableBtn'>
                         <button onClick={() => openModal(index)}>Edit</button>
-                        <button onClick={() => deletePlan(index)}>Delete</button>
+                        <button className='del' onClick={() => deletePlan(index)}>Delete</button>
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-          </section>
-
-          <section id="training-materials" className="dashboard-section">
-            <h2>Manage Training Materials</h2>
-            <textarea id="training-textarea" placeholder="Edit training materials here..."></textarea>
-            <button className='save_material' id="save-materials">Save Materials</button>
           </section>
 
           <section id="kpi" className="dashboard-section">
